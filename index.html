@@ -269,6 +269,55 @@ footer a{color:var(--ink-2)}
   .tl-item{grid-template-columns:84px 1fr;gap:12px}
   .reco .chip{min-width:120px;flex:1}
 }
+
+/* ============================================================
+   PRINT / PDF  — force light chart-paper, tidy page breaks
+   ============================================================ */
+@media print{
+  /* always print the light palette, whatever the on-screen theme */
+  :root,:root[data-theme="dark"],:root[data-theme="light"]{
+    --paper:#fff; --paper-2:#F5F0E4; --surface:#fff; --surface-ring:#C9BC9E;
+    --ink:#0E2A3A; --ink-2:#375162; --ink-3:#5D717C;
+    --teal:#0B6E72; --teal-bright:#0BA1A6; --coral:#C64A2C; --coral-deep:#B8442A;
+    --sand:#D9CBA8; --gold:#9A6A10; --sea:#EAF1EE; --sea-line:#C4D8D3;
+    --good:#3F7A4E; --warn:#8A6410; --bad:#B23A22;
+    --s1:#0B8E93; --s2:#C64A2C; --s3:#2F72C4; --s4:#9A6A10; --s5:#7A4E8C; --s6:#3F8A50;
+    --shadow:none; --shadow-lg:none;
+  }
+  html,body{background:#fff}
+  *{ -webkit-print-color-adjust:exact !important; print-color-adjust:exact !important }
+  body{font-size:10.5pt;line-height:1.45}
+  body::before{display:none}                 /* drop the sounding-dot texture */
+  .topnav,.themebtn{display:none !important}  /* nav + toggle off paper */
+  .wrap{max-width:none;padding:0 14mm}
+  @page{margin:14mm 0}
+
+  /* one clean page break before each numbered deliverable */
+  section{padding:14pt 0;break-before:page}
+  #summary{break-before:auto}
+  section[style*="background"]{background:transparent !important}
+
+  h1{font-size:34pt}
+  h2{font-size:19pt}
+  .hero{padding:6pt 0 0}
+  .hero h1{font-size:34pt}
+  .lead,.section-intro{max-width:none}
+
+  /* never split a self-contained block across a page */
+  .card,.callout,.chart,.tablewrap,.optcard,.tl-item,.reco,.stat,.mapfeature,
+  .metastrip,figure,tr,thead{break-inside:avoid}
+  h2,h3,h4{break-after:avoid}
+  .sechead{break-after:avoid}
+  .cols,.cols3{display:grid}                  /* keep comparative columns side-by-side */
+  .grid[style*="1fr 1fr"]{grid-template-columns:1fr 1fr !important}
+
+  a{color:var(--ink);text-decoration:none}
+  .navlinks{display:none}
+  details{break-inside:avoid}
+  details>summary{list-style:none;color:var(--ink-3)}
+  .disclaimer,.foot-note{color:var(--ink-2)}
+  footer{break-before:page}
+}
 </style>
 
 <!-- ================= NAV ================= -->
@@ -647,6 +696,38 @@ footer a{color:var(--ink-2)}
       <div class="lab">✈ The arrival rule — with the delay math</div>
       <p style="margin:0 0 8px"><strong>Arrive on-island no later than the day before a Thursday check-in — Tuesday for the SEA/PHX crews.</strong> Island legs are once-daily: a missed connection isn't "the next flight in two hours," it's <strong>+24 hours</strong>, and a Wednesday-for-Thursday plan has effectively zero slack. A Tuesday arrival buys a full recovery day.</p>
       <p style="margin:0;font-size:.9rem;color:var(--ink-3)"><strong>Templates —</strong> DFW: single AA ticket via MIA/CLT, arrive Wed. PHX: fly to MIA, overnight, morning island flight, arrive Tue. SEA: overnight-at-hub (preferred) or SEA–MIA red-eye (high-risk), arrive Tue. For the one-way plan, position via <strong>Barbados (BGI)</strong> on interCaribbean/LIAT and add a buffer day.</p>
+    </div>
+
+    <h3 style="margin-top:44px">Wildcard: SVD (Argyle) as a base or joining point</h3>
+    <p class="section-intro" style="margin-top:6px">St&nbsp;Vincent's Argyle airport drops you in the <em>middle</em> of the cruising ground — but it's the thinnest air link and none of the three shortlisted operators base there. It earns a place as a <strong>joining airport</strong>, not a primary base.</p>
+    <div class="cols" style="margin-top:20px;grid-template-columns:.95fr 1.05fr">
+      <div class="card" style="display:flex;flex-direction:column;gap:12px;justify-content:center">
+        <div>
+          <div class="cap">The trade</div>
+          <h4 style="margin:4px 0">Closest to the Grenadines, farthest from a backup flight</h4>
+          <p style="font-size:.92rem;color:var(--ink-2);margin:6px 0 0">SVD is essentially <strong>American via Miami</strong> (daily except Tue), plus Caribbean Airlines one-stop via POS/BGI — one broken thread and there's no same-day alternative. But it's a <strong>short hop to Bequia, Mustique and the Cays</strong>, cutting the Grenada delivery legs entirely.</p>
+        </div>
+        <div class="rule" style="margin:2px 0"></div>
+        <div>
+          <div class="cap">How you'd actually use it</div>
+          <p style="font-size:.92rem;color:var(--ink-2);margin:6px 0 0">Two ways: (1) fly SVD, then <strong>SVG&nbsp;Air / ferry to Bequia or Union</strong> to meet a boat positioned there; or (2) switch to a <strong>St&nbsp;Vincent-based operator</strong> (e.g. Barefoot, Blue Lagoon) for a pure Grenadines loop — giving up the Moorings one-way and the Pitons.</p>
+        </div>
+      </div>
+      <div class="tablewrap">
+        <table style="min-width:0">
+          <caption>Each airport judged as a charter base for this trip.</caption>
+          <thead><tr><th>As a base</th><th>Air resilience</th><th>Sail position</th><th>Top-3 operators?</th></tr></thead>
+          <tbody>
+            <tr><td><strong>UVF</strong> · St Lucia<br><span class="cap">★ our pick</span></td><td><span class="pill ok"><span class="d"></span>Strongest</span></td><td>North end — Pitons, then the whole chain</td><td>Moorings · Sunsail</td></tr>
+            <tr><td><strong>GND</strong> · Grenada</td><td><span class="pill ok"><span class="d"></span>Strong · 3 carriers</span></td><td>South end — delivery legs up to the Grenadines</td><td>Moorings · Sunsail · Dream</td></tr>
+            <tr><td><strong>SVD</strong> · St Vincent<br><span class="cap">wildcard</span></td><td><span class="pill warn"><span class="d"></span>Thin · AA/MIA, no Tue</span></td><td>Central — shortest sail to Bequia/Cays</td><td><span class="pill bad" style="font-size:.6rem"><span class="d"></span>None — Barefoot only</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:20px">
+      <div class="lab">✈ Verdict on SVD</div>
+      <p style="margin:0"><strong>Use SVD to join, not to base.</strong> It shines only if you abandon the one-way and charter a St&nbsp;Vincent loop, or if a crew member needs the shortest possible path to a boat waiting in Bequia. For the recommended plan it stays a <strong>positioning option</strong> — keep UVF-in / GND-out as the backbone.</p>
     </div>
   </div>
 </section>
@@ -1170,5 +1251,11 @@ footer a{color:var(--ink-2)}
       var a=map[e.target.id];if(a){a.style.color='var(--ink)';a.style.background='var(--paper-2)';}}});
   },{rootMargin:'-45% 0px -50% 0px'});
   Object.keys(map).forEach(function(id){obs.observe(document.getElementById(id));});
+})();
+/* expand collapsible sources when printing / saving to PDF, then restore */
+(function(){
+  function all(){return [].slice.call(document.querySelectorAll('details'));}
+  window.addEventListener('beforeprint',function(){all().forEach(function(d){d.dataset.o=d.open?'1':'0';d.open=true;});});
+  window.addEventListener('afterprint',function(){all().forEach(function(d){d.open=d.dataset.o==='1';});});
 })();
 </script>
