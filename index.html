@@ -1,0 +1,1174 @@
+<title>Grenadines Charter Dossier — April 2027</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Decision-ready bareboat charter planning dossier: Grenada to St Lucia, April 2027. Post-Beryl reality check, charter matrix, four itineraries, conditions, and budget.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   GRENADINES CHARTER DOSSIER — chart-ink design system
+   ============================================================ */
+:root{
+  /* chart-paper light ground */
+  --paper:#F3ECDD;          /* warm chart paper */
+  --paper-2:#EDE4D1;        /* deeper paper for panels */
+  --surface:#FBF7EE;        /* card surface */
+  --surface-ring:#DFD3B8;   /* hairline on paper */
+  --ink:#0E2A3A;            /* chart ink navy */
+  --ink-2:#375162;          /* secondary ink */
+  --ink-3:#6B7F8B;          /* muted ink */
+  --teal:#0B6E72;           /* deep Caribbean teal */
+  --teal-bright:#0BA1A6;    /* water accent */
+  --coral:#E15A3A;          /* signal / buoy / hazard */
+  --coral-deep:#B8442A;
+  --sand:#CDB98F;
+  --gold:#B07A12;
+  --sea:#D9E7E4;            /* ocean tint on paper */
+  --sea-line:#B9D2CE;       /* graticule on paper */
+  --good:#3F7A4E; --warn:#B07A12; --bad:#C0402A;
+
+  /* chart series (validated light) */
+  --s1:#0BA1A6; --s2:#E15A3A; --s3:#2F72C4; --s4:#B07A12; --s5:#8A5AA6; --s6:#3F9A5A;
+
+  --maxw:1180px;
+  --radius:14px; --radius-sm:9px;
+  --shadow:0 1px 2px rgba(14,42,58,.06),0 8px 30px -12px rgba(14,42,58,.18);
+  --shadow-lg:0 2px 6px rgba(14,42,58,.08),0 30px 60px -24px rgba(14,42,58,.30);
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --sans:"Archivo",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --serif:"Fraunces",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#081824; --paper-2:#0B2130; --surface:#0E2836; --surface-ring:#1C3E4E;
+    --ink:#EAF1F0; --ink-2:#A9C1C6; --ink-3:#7C979E;
+    --teal:#3FBEC2; --teal-bright:#17BFC4; --coral:#F0714E; --coral-deep:#E15A3A;
+    --sand:#C9B489; --gold:#D6A43A;
+    --sea:#0C2836; --sea-line:#163847;
+    --good:#5FBE78; --warn:#D6A43A; --bad:#F0714E;
+    --s1:#12989D; --s2:#E15A3A; --s3:#4784C4; --s4:#BC8A2A; --s5:#9463B4; --s6:#489C60;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px -14px rgba(0,0,0,.6);
+    --shadow-lg:0 2px 8px rgba(0,0,0,.5),0 34px 70px -26px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#081824; --paper-2:#0B2130; --surface:#0E2836; --surface-ring:#1C3E4E;
+  --ink:#EAF1F0; --ink-2:#A9C1C6; --ink-3:#7C979E;
+  --teal:#3FBEC2; --teal-bright:#17BFC4; --coral:#F0714E; --coral-deep:#E15A3A;
+  --sand:#C9B489; --gold:#D6A43A; --sea:#0C2836; --sea-line:#163847;
+  --good:#5FBE78; --warn:#D6A43A; --bad:#F0714E;
+  --s1:#12989D; --s2:#E15A3A; --s3:#4784C4; --s4:#BC8A2A; --s5:#9463B4; --s6:#489C60;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px -14px rgba(0,0,0,.6);
+  --shadow-lg:0 2px 8px rgba(0,0,0,.5),0 34px 70px -26px rgba(0,0,0,.7);
+}
+:root[data-theme="light"]{
+  --paper:#F3ECDD; --paper-2:#EDE4D1; --surface:#FBF7EE; --surface-ring:#DFD3B8;
+  --ink:#0E2A3A; --ink-2:#375162; --ink-3:#6B7F8B;
+  --teal:#0B6E72; --teal-bright:#0BA1A6; --coral:#E15A3A; --coral-deep:#B8442A;
+  --sand:#CDB98F; --gold:#B07A12; --sea:#D9E7E4; --sea-line:#B9D2CE;
+  --good:#3F7A4E; --warn:#B07A12; --bad:#C0402A;
+  --s1:#0BA1A6; --s2:#E15A3A; --s3:#2F72C4; --s4:#B07A12; --s5:#8A5AA6; --s6:#3F9A5A;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+/* chart-paper texture: faint sounding dots */
+body::before{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(var(--sea-line) .8px,transparent .8px);
+  background-size:26px 26px;mask-image:linear-gradient(to bottom,transparent,#000 40%,#000 90%,transparent);
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 clamp(18px,4vw,44px);position:relative;z-index:1}
+h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.08;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.7rem,3.4vw,2.5rem);letter-spacing:-.01em}
+h3{font-size:clamp(1.15rem,2vw,1.5rem);font-weight:600}
+h4{font-size:1.06rem;font-weight:600;font-family:var(--sans);letter-spacing:-.005em}
+p{margin:0 0 1em}
+a{color:var(--teal);text-underline-offset:2px}
+strong{font-weight:600;color:var(--ink)}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+.lead{font-size:1.14rem;color:var(--ink-2);max-width:66ch}
+
+/* ---------- top nav ---------- */
+.topnav{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--paper) 86%,transparent);
+  backdrop-filter:blur(12px) saturate(1.2);border-bottom:1px solid var(--surface-ring)}
+.topnav .row{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:18px;
+  padding:11px clamp(18px,4vw,44px)}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.82rem;font-weight:600;
+  letter-spacing:.02em;color:var(--ink);white-space:nowrap}
+.brand .dot{width:9px;height:9px;border-radius:50%;background:var(--coral);box-shadow:0 0 0 3px color-mix(in srgb,var(--coral) 25%,transparent)}
+.navlinks{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a{font-family:var(--mono);font-size:.73rem;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--ink-3);text-decoration:none;padding:7px 10px;border-radius:8px;white-space:nowrap;transition:.15s}
+.navlinks a:hover{color:var(--ink);background:var(--paper-2)}
+.themebtn{flex:none;border:1px solid var(--surface-ring);background:var(--surface);color:var(--ink-2);
+  width:34px;height:34px;border-radius:9px;cursor:pointer;display:grid;place-items:center;font-size:.9rem}
+.themebtn:hover{color:var(--ink);border-color:var(--teal)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;padding:clamp(46px,7vw,88px) 0 30px}
+.hero .kick{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;margin-bottom:22px}
+.hero h1{font-size:clamp(2.6rem,7vw,5.3rem);font-weight:600;letter-spacing:-.022em;line-height:.98}
+.hero h1 em{font-style:italic;color:var(--teal)}
+.hero .sub{margin-top:20px;font-size:clamp(1.05rem,2.2vw,1.32rem);color:var(--ink-2);max-width:60ch}
+.metastrip{display:flex;flex-wrap:wrap;gap:0;margin-top:32px;border:1px solid var(--surface-ring);
+  border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+.metastrip .cell{flex:1 1 150px;padding:16px 18px;border-right:1px solid var(--surface-ring)}
+.metastrip .cell:last-child{border-right:0}
+.metastrip .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-3)}
+.metastrip .v{font-family:var(--serif);font-size:1.42rem;font-weight:600;margin-top:4px;color:var(--ink)}
+.metastrip .v small{font-family:var(--mono);font-size:.7rem;color:var(--ink-3);font-weight:500}
+
+/* ---------- section scaffolding ---------- */
+section{padding:clamp(46px,7vw,84px) 0;position:relative}
+.sechead{display:flex;align-items:baseline;gap:16px;margin-bottom:8px}
+.sechead .num{font-family:var(--mono);font-size:.8rem;color:var(--coral);font-weight:600;letter-spacing:.1em}
+.rule{height:1px;background:linear-gradient(90deg,var(--surface-ring),transparent);margin:34px 0}
+.section-intro{max-width:70ch;color:var(--ink-2);font-size:1.05rem}
+
+/* ---------- cards ---------- */
+.grid{display:grid;gap:18px}
+.card{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius);
+  padding:22px 22px;box-shadow:var(--shadow)}
+.card h4{margin-bottom:6px}
+.card .cap{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+
+/* ---------- pills / tags ---------- */
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.68rem;font-weight:500;
+  letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;border:1px solid var(--surface-ring);
+  color:var(--ink-2);background:var(--paper-2);white-space:nowrap}
+.pill.ok{color:var(--good);border-color:color-mix(in srgb,var(--good) 40%,transparent);background:color-mix(in srgb,var(--good) 10%,transparent)}
+.pill.warn{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent);background:color-mix(in srgb,var(--warn) 12%,transparent)}
+.pill.bad{color:var(--bad);border-color:color-mix(in srgb,var(--bad) 40%,transparent);background:color-mix(in srgb,var(--bad) 10%,transparent)}
+.pill.teal{color:var(--teal);border-color:color-mix(in srgb,var(--teal) 40%,transparent);background:color-mix(in srgb,var(--teal) 10%,transparent)}
+.pill .d{width:6px;height:6px;border-radius:50%;background:currentColor}
+.verified{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--good);font-weight:600}
+.est{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--warn);font-weight:600}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;border:1px solid var(--surface-ring);border-radius:var(--radius);background:var(--surface);box-shadow:var(--shadow)}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:520px}
+thead th{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
+  text-align:left;padding:13px 15px;border-bottom:1.5px solid var(--surface-ring);white-space:nowrap;background:var(--paper-2);position:sticky;top:0}
+tbody td{padding:11px 15px;border-bottom:1px solid color-mix(in srgb,var(--surface-ring) 60%,transparent);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:color-mix(in srgb,var(--teal) 5%,transparent)}
+td .num,.tnum{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.tnum{text-align:right}
+th.tnum{text-align:right}
+table caption{caption-side:bottom;text-align:left;padding:10px 15px;font-size:.74rem;color:var(--ink-3);font-family:var(--mono)}
+tr.hi td{background:color-mix(in srgb,var(--teal) 9%,transparent)}
+tr.total td{font-weight:600;border-top:1.5px solid var(--surface-ring);background:var(--paper-2)}
+
+/* ---------- callouts ---------- */
+.callout{border-radius:var(--radius);padding:18px 20px 18px 22px;position:relative;border:1px solid var(--surface-ring);
+  background:var(--surface);margin:20px 0}
+.callout::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px 0 0 4px;background:var(--teal)}
+.callout.hazard::before{background:var(--coral)}
+.callout.hazard{background:color-mix(in srgb,var(--coral) 7%,var(--surface))}
+.callout.win::before{background:var(--good)}
+.callout .lab{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;display:flex;gap:8px;align-items:center}
+.callout.hazard .lab{color:var(--coral)}
+.callout p:last-child{margin-bottom:0}
+
+/* ---------- feature map ---------- */
+.mapfeature{margin-top:40px;border:1px solid var(--surface-ring);border-radius:var(--radius);overflow:hidden;
+  background:var(--sea);box-shadow:var(--shadow-lg)}
+.mapfeature svg{display:block;width:100%;height:auto}
+.maplegend{display:flex;flex-wrap:wrap;gap:14px 22px;padding:16px 22px;background:var(--surface);border-top:1px solid var(--surface-ring)}
+.maplegend .item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.72rem;color:var(--ink-2)}
+.maplegend .sw{width:22px;height:0;border-top:2.5px dashed var(--coral)}
+.maplegend .sw.node{width:11px;height:11px;border-radius:50%;border:2px solid var(--teal-bright);background:var(--surface)}
+.maplegend .sw.hz{width:11px;height:11px;border-radius:50%;background:var(--coral)}
+.maplegend .sw.port{width:12px;height:12px;background:var(--teal);transform:rotate(45deg)}
+
+/* ---------- two-col ---------- */
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:820px){.cols,.cols3{grid-template-columns:1fr}}
+
+/* ---------- stat tiles ---------- */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.stat{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius-sm);padding:16px 18px}
+.stat .n{font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums}
+.stat .n small{font-size:.9rem;color:var(--ink-3);font-family:var(--mono)}
+.stat .l{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+
+/* ---------- charts ---------- */
+.chart{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius);padding:20px 22px 16px;box-shadow:var(--shadow)}
+.chart .ct{font-family:var(--serif);font-weight:600;font-size:1.1rem}
+.chart .cs{font-family:var(--mono);font-size:.7rem;color:var(--ink-3);letter-spacing:.04em;margin-top:2px;margin-bottom:14px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.clegend{display:flex;flex-wrap:wrap;gap:12px 16px;margin-top:12px}
+.clegend .li{display:flex;align-items:center;gap:7px;font-size:.78rem;color:var(--ink-2);font-family:var(--mono)}
+.clegend .li .sw{width:12px;height:12px;border-radius:3px}
+
+/* ---------- recommendation banner ---------- */
+.reco{background:linear-gradient(135deg,var(--ink),color-mix(in srgb,var(--ink) 78%,var(--teal)));
+  color:#EAF1F0;border-radius:var(--radius);padding:clamp(26px,4vw,42px);box-shadow:var(--shadow-lg);position:relative;overflow:hidden}
+.reco::after{content:"";position:absolute;right:-60px;top:-60px;width:280px;height:280px;border-radius:50%;
+  background:radial-gradient(circle,color-mix(in srgb,var(--teal-bright) 40%,transparent),transparent 70%);pointer-events:none}
+.reco .eyebrow{color:var(--teal-bright)}
+.reco h2{color:#fff;margin:8px 0 6px}
+.reco .lead{color:#C7DAD9}
+.reco .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.reco .chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:12px 15px;min-width:150px}
+.reco .chip .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-bright)}
+.reco .chip .v{font-family:var(--serif);font-size:1.12rem;font-weight:600;margin-top:3px;color:#fff}
+
+/* ---------- timeline ---------- */
+.timeline{position:relative;margin-top:24px;padding-left:8px}
+.tl-item{display:grid;grid-template-columns:118px 1fr;gap:20px;padding:0 0 4px;position:relative}
+.tl-item .when{font-family:var(--mono);font-size:.76rem;color:var(--coral);font-weight:600;text-align:right;padding-top:2px;letter-spacing:.02em}
+.tl-item .body{border-left:2px solid var(--surface-ring);padding:0 0 26px 22px;position:relative}
+.tl-item:last-child .body{border-left-color:transparent}
+.tl-item .body::before{content:"";position:absolute;left:-7px;top:4px;width:12px;height:12px;border-radius:50%;
+  background:var(--surface);border:2.5px solid var(--teal-bright)}
+.tl-item.key .body::before{background:var(--coral);border-color:var(--coral)}
+.tl-item .body h4{margin-bottom:3px}
+.tl-item .body p{font-size:.92rem;color:var(--ink-2);margin:0}
+
+/* ---------- option route mini map ---------- */
+.optcard{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.optcard .top{padding:20px 22px 14px;border-bottom:1px solid var(--surface-ring)}
+.optcard .badge{font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.08em;color:#fff;background:var(--teal);padding:3px 9px;border-radius:6px}
+.optcard .badge.oneway{background:var(--coral)}
+.optcard h3{margin:12px 0 4px}
+.optcard .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.minimap{background:var(--sea);border-bottom:1px solid var(--surface-ring)}
+.minimap svg{display:block;width:100%;height:auto}
+.optcard .body{padding:16px 22px 20px}
+.dayrow{display:grid;grid-template-columns:38px 1fr auto;gap:10px;align-items:baseline;padding:7px 0;border-bottom:1px dotted color-mix(in srgb,var(--surface-ring) 70%,transparent);font-size:.86rem}
+.dayrow:last-child{border-bottom:0}
+.dayrow .d{font-family:var(--mono);font-size:.72rem;color:var(--coral);font-weight:600}
+.dayrow .nm{font-family:var(--mono);font-size:.74rem;color:var(--ink-3);text-align:right;white-space:nowrap}
+
+/* footer */
+footer{padding:50px 0 70px;border-top:1px solid var(--surface-ring);margin-top:40px;color:var(--ink-3);font-size:.85rem}
+footer a{color:var(--ink-2)}
+.srcgrid{columns:2;column-gap:30px;font-size:.78rem;font-family:var(--mono);color:var(--ink-3);margin-top:12px}
+@media(max-width:640px){.srcgrid{columns:1}}
+.srcgrid a{display:block;margin-bottom:5px;color:var(--ink-3);text-decoration:none;break-inside:avoid}
+.srcgrid a:hover{color:var(--teal)}
+
+.foot-note{font-size:.78rem;color:var(--ink-3);font-family:var(--mono);margin-top:6px}
+.disclaimer{background:var(--paper-2);border:1px dashed var(--surface-ring);border-radius:var(--radius-sm);padding:14px 18px;font-size:.82rem;color:var(--ink-2);margin-top:20px}
+
+@media(max-width:560px){
+  .metastrip .cell{flex-basis:50%}
+  .tl-item{grid-template-columns:84px 1fr;gap:12px}
+  .reco .chip{min-width:120px;flex:1}
+}
+</style>
+
+<!-- ================= NAV ================= -->
+<nav class="topnav">
+  <div class="row">
+    <div class="brand"><span class="dot"></span>GRENADINES&nbsp;·&nbsp;APR&nbsp;2027</div>
+    <div class="navlinks">
+      <a href="#summary">Summary</a>
+      <a href="#reality">Reality Check</a>
+      <a href="#flights">Flights</a>
+      <a href="#fleet">Charter Matrix</a>
+      <a href="#itineraries">Itineraries</a>
+      <a href="#conditions">Conditions</a>
+      <a href="#money">Money</a>
+      <a href="#booking">Booking Plan</a>
+    </div>
+    <button class="themebtn" id="themebtn" aria-label="Toggle light/dark theme">◐</button>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="kick">
+      <span class="eyebrow">Bareboat Charter Dossier</span>
+      <span class="pill teal"><span class="d"></span>Resurrecting the 2020 Plan</span>
+    </div>
+    <h1>The Grenadines,<br><em>finally.</em></h1>
+    <p class="sub">A decision-ready plan for the charter you fully scoped in 2020 and never sailed — rebuilt for <strong>April 2027</strong> with post-Beryl ground truth, current pricing, and four routes from Grenada to St&nbsp;Lucia.</p>
+
+    <div class="metastrip">
+      <div class="cell"><div class="k">Cruising Ground</div><div class="v">Grenada → St Lucia</div></div>
+      <div class="cell"><div class="k">Crew</div><div class="v">6 <small>/ 4-cabin cat</small></div></div>
+      <div class="cell"><div class="k">Target Window</div><div class="v">Apr 2027 <small>shoulder</small></div></div>
+      <div class="cell"><div class="k">Baseline Route</div><div class="v">~146 <small>nm · 9 days</small></div></div>
+    </div>
+
+    <!-- ISLAND-CHAIN FEATURE MAP -->
+    <div class="mapfeature" id="chainmap">
+      <svg viewBox="0 0 1180 660" role="img" aria-label="Schematic chart of the Grenadines island chain from Grenada in the south to St Lucia in the north, showing the 2020 baseline charter route.">
+        <defs>
+          <pattern id="grat" width="90" height="90" patternUnits="userSpaceOnUse">
+            <path d="M90 0V90M0 90H90" fill="none" stroke="var(--sea-line)" stroke-width="1"/>
+          </pattern>
+          <radialGradient id="hazg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="var(--coral)" stop-opacity=".38"/>
+            <stop offset="70%" stop-color="var(--coral)" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="var(--coral)" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <rect width="1180" height="660" fill="var(--sea)"/>
+        <rect width="1180" height="660" fill="url(#grat)"/>
+        <!-- faint depth soundings -->
+        <g fill="var(--sea-line)" font-family="var(--mono)" font-size="12" opacity=".8">
+          <text x="150" y="230">184</text><text x="260" y="330">212</text>
+          <text x="430" y="250">96</text><text x="600" y="180">148</text>
+          <text x="760" y="330">205</text><text x="560" y="500">176</text>
+          <text x="900" y="420">233</text><text x="1040" y="250">261</text>
+          <text x="330" y="590">198</text><text x="700" y="560">217</text>
+        </g>
+
+        <!-- ROUTE (2020 baseline, dashed rhumb line) -->
+        <g fill="none" stroke="var(--coral)" stroke-width="2.4" stroke-dasharray="3 7" stroke-linecap="round" opacity=".92">
+          <path d="M232 556 L352 452"/>            <!-- Grenada -> Tyrrell Bay -->
+          <path d="M352 452 L487 392"/>            <!-- Tyrrell -> Salt Whistle -->
+          <path d="M487 392 L651 276"/>            <!-- Mayreau -> Bequia -->
+          <path d="M651 276 L636 322"/>            <!-- Bequia -> Mustique -->
+          <path d="M636 322 L520 380"/>            <!-- Mustique -> Tobago Cays -->
+          <path d="M520 380 L410 416"/>            <!-- Cays -> Petite Martinique -->
+          <path d="M410 416 L232 556"/>            <!-- PM -> Grenada -->
+        </g>
+
+        <!-- ISLANDS (schematic, not to scale) -->
+        <g stroke="var(--gold)" stroke-width="1.2" stroke-opacity=".55">
+          <!-- Grenada -->
+          <path fill="var(--sand)" d="M186 512 q34-22 74-14 q40 8 44 40 q6 40-20 66 q-24 24-60 20 q-40-4-52-40 q-14-42 14-72Z"/>
+          <!-- Carriacou -->
+          <path fill="var(--sand)" d="M336 424 q22-10 34 6 q10 16 2 34 q-8 18-28 18 q-20 0-26-18 q-6-28 18-40Z"/>
+          <!-- Petite Martinique / PSV cluster -->
+          <circle fill="var(--sand)" cx="408" cy="418" r="9"/>
+          <circle fill="var(--sand)" cx="424" cy="430" r="5"/>
+          <!-- Union -->
+          <path fill="var(--sand)" d="M446 386 q18-8 30 2 q10 10 4 24 q-8 14-26 12 q-16-2-20-16 q-4-16 12-22Z"/>
+          <!-- Mayreau -->
+          <path fill="var(--sand)" d="M480 380 q12-4 18 6 q4 10-4 18 q-10 8-20 0 q-8-10 6-24Z"/>
+          <!-- Tobago Cays reefs -->
+          <g fill="var(--sand)"><circle cx="516" cy="376" r="4"/><circle cx="526" cy="382" r="3.4"/><circle cx="534" cy="374" r="3"/><circle cx="522" cy="368" r="2.6"/></g>
+          <!-- Canouan -->
+          <path fill="var(--sand)" d="M552 336 q16-8 28 2 q10 10 4 26 q-8 16-26 14 q-16-2-20-18 q-4-18 10-24Z"/>
+          <!-- Mustique -->
+          <path fill="var(--sand)" d="M628 308 q16-6 26 6 q8 12 0 26 q-10 14-26 10 q-14-4-16-18 q-2-18 16-30Z"/>
+          <!-- Bequia -->
+          <path fill="var(--sand)" d="M632 250 q30-10 46 8 q12 16 2 34 q-14 22-42 18 q-24-4-30-24 q-6-24 24-36Z"/>
+          <!-- St Vincent -->
+          <path fill="var(--sand)" d="M664 150 q46-18 78 6 q28 22 22 62 q-6 44-46 58 q-42 14-72-14 q-28-28-20-70 q6-30 38-42Z"/>
+          <!-- St Lucia -->
+          <path fill="var(--sand)" d="M888 56 q48-14 78 16 q26 28 16 74 q-10 46-54 58 q-44 12-72-18 q-24-28-14-72 q8-34 46-58Z"/>
+        </g>
+
+        <!-- KICK 'EM JENNY exclusion zone -->
+        <circle cx="300" cy="474" r="46" fill="url(#hazg)"/>
+        <circle cx="300" cy="474" r="20" fill="none" stroke="var(--coral)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="300" y="478" text-anchor="middle" font-family="var(--mono)" font-size="18" fill="var(--coral)" font-weight="600">⚠</text>
+
+        <!-- WAYPOINT NODES -->
+        <g font-family="var(--mono)" font-size="13" font-weight="500">
+          <!-- helper style via presentation attrs -->
+          <g fill="var(--ink)">
+          <!-- Port Louis / Grenada base -->
+          <rect x="226" y="550" width="12" height="12" rx="2" transform="rotate(45 232 556)" fill="var(--teal)"/>
+          <text x="196" y="600">Port Louis · Grenada</text>
+          <!-- Tyrrell Bay -->
+          <circle cx="352" cy="452" r="5.5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.5"/>
+          <text x="366" y="446">Tyrrell Bay</text>
+          <!-- Chatham/Union -->
+          <circle cx="456" cy="398" r="5.5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.5"/>
+          <text x="452" y="368">Union / Clifton</text>
+          <!-- Salt Whistle -->
+          <circle cx="487" cy="392" r="5.5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.5"/>
+          <text x="470" y="424">Salt Whistle</text>
+          <!-- Tobago Cays -->
+          <circle cx="522" cy="376" r="5.5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.5"/>
+          <text x="536" y="356">Tobago Cays</text>
+          <!-- Mustique -->
+          <circle cx="636" cy="322" r="5.5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.5"/>
+          <text x="650" y="326">Mustique</text>
+          <!-- Bequia -->
+          <circle cx="651" cy="276" r="5.5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.5"/>
+          <text x="600" y="240">Bequia</text>
+          <!-- St Vincent label (fixed dark: sits on light sand in both themes) -->
+          <text x="690" y="216" fill="#12303f">St Vincent</text>
+          <!-- St Lucia base -->
+          <rect x="922" y="112" width="12" height="12" rx="2" transform="rotate(45 928 118)" fill="var(--teal)"/>
+          <text x="838" y="232">Rodney Bay · St Lucia</text>
+          </g>
+        </g>
+
+        <!-- COMPASS ROSE -->
+        <g transform="translate(1088 118)" opacity=".9">
+          <circle r="34" fill="none" stroke="var(--ink-3)" stroke-width="1"/>
+          <path d="M0 -34 L7 0 L0 34 L-7 0Z" fill="var(--coral)"/>
+          <path d="M-34 0 L0 7 L34 0 L0 -7Z" fill="var(--ink-3)" opacity=".6"/>
+          <text x="0" y="-40" text-anchor="middle" font-family="var(--mono)" font-size="13" fill="var(--ink)" font-weight="600">N</text>
+        </g>
+        <!-- scale note -->
+        <text x="40" y="636" font-family="var(--mono)" font-size="11" fill="var(--ink-3)">SCHEMATIC · NOT TO SCALE · ISLAND CHAIN RUNS NNE–SSW</text>
+      </svg>
+    </div>
+    <div class="maplegend">
+      <div class="item"><span class="sw"></span>2020 baseline route</div>
+      <div class="item"><span class="sw node"></span>Overnight anchorage</div>
+      <div class="item"><span class="sw port"></span>Charter base / clearance</div>
+      <div class="item"><span class="sw hz"></span>Kick 'em Jenny exclusion zone</div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<section id="summary">
+  <div class="wrap">
+    <div class="sechead"><span class="num">00</span><span class="eyebrow">Executive Summary</span></div>
+    <h2 style="max-width:16ch;margin-bottom:14px">The recommendation, before the reasoning.</h2>
+    <p class="section-intro">You planned this route once and it holds up. The chain is <strong>open for business</strong> — every 2020 stop is viable for April 2027, though Beryl left fingerprints you'll want to plan around. Below is the single plan we'd book; the rest of this dossier is the evidence and the alternatives.</p>
+
+    <div class="reco" style="margin-top:28px">
+      <span class="eyebrow">Our Single Recommended Plan</span>
+      <h2>Sail it one-way, north to south, on a Moorings 45.</h2>
+      <p class="lead">Fly into St&nbsp;Lucia, drop down the whole island chain finishing at your old home base in Grenada, on the only boat/company that actually makes the one-way possible — right-sized for six, youngest fleet, best base backup for a demanding route.</p>
+      <div class="chips">
+        <div class="chip"><div class="k">Company</div><div class="v">The Moorings</div></div>
+        <div class="chip"><div class="k">Boat</div><div class="v">Moorings 4500L · Leopard 45</div></div>
+        <div class="chip"><div class="k">Cabins / Heads</div><div class="v">4 / 4 · sleeps 6+</div></div>
+        <div class="chip"><div class="k">Itinerary</div><div class="v">Option D · 10-day one-way</div></div>
+        <div class="chip"><div class="k">Route</div><div class="v">Rodney Bay → Port Louis</div></div>
+        <div class="chip"><div class="k">Window</div><div class="v">10–24 April 2027</div></div>
+        <div class="chip"><div class="k">Flights</div><div class="v">Open-jaw · UVF in / GND out</div></div>
+        <div class="chip"><div class="k">Est. all-in / person</div><div class="v">≈ $4,100 <span style="font-size:.7rem;color:#9fc0bf">comfortable</span></div></div>
+      </div>
+    </div>
+
+    <div class="cols3" style="margin-top:24px">
+      <div class="card">
+        <div class="cap">Why one-way</div>
+        <h4>Only Moorings &amp; Sunsail can do it</h4>
+        <p style="font-size:.92rem;color:var(--ink-2);margin:0">They alone run bases in <strong>both</strong> Grenada (Port Louis) and St&nbsp;Lucia (Rodney Bay). The published one-way fee is <strong>$2,100</strong>. Everyone else — including Dream, your 2020 operator — is single-island here.</p>
+      </div>
+      <div class="card">
+        <div class="cap">Why the switch from Dream</div>
+        <h4>Dream is Grenada-only now</h4>
+        <p style="font-size:.92rem;color:var(--ink-2);margin:0">Dream Yacht has no St&nbsp;Lucia bareboat base, so it can't do the one-way. It's still the smart <strong>value round-trip</strong> pick (Bali 4.2, friendlier deposit terms) if you'd rather start and finish in Grenada.</p>
+      </div>
+      <div class="card">
+        <div class="cap">The 2020 scar tissue</div>
+        <h4>Protect the deposit this time</h4>
+        <p style="font-size:.92rem;color:var(--ink-2);margin:0">Moorings terms are <strong>strict</strong> (deposit non-refundable, 100% inside 180 days). The fix isn't a COVID guarantee — it's the <strong>12-month refund credit + a Cancel-For-Any-Reason rider</strong> bought at deposit.</p>
+      </div>
+    </div>
+
+    <div class="callout hazard" style="margin-top:24px">
+      <div class="lab">▲ Post-2020 reality — read first</div>
+      <p style="margin:0"><strong>Hurricane Beryl (Cat&nbsp;4, 1 July 2024)</strong> put its eyewall directly over Carriacou, Petite Martinique, Union and Mayreau — ~95% of homes on Carriacou/PM destroyed. By 2026 the marine spine (clearance, moorings, fuel, key restaurants) is recovered or well-recovered, but a handful of your 2020 venues are unconfirmed and <strong>Salt Whistle Bay's sand spit and bars are still being rebuilt</strong>. Full stop-by-stop status in §1.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 1 · REALITY CHECK ============ -->
+<section id="reality" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sechead"><span class="num">01</span><span class="eyebrow">Post-Beryl Reality Check</span></div>
+    <h2 style="max-width:20ch">What survived, what changed, what to phone ahead.</h2>
+    <p class="section-intro">Researched mid-2026, projected ~33 months post-storm to April&nbsp;2027. Verdicts are conservative. Anything tagged <span class="est">confirm</span> needs a call or a VHF hail on the day.</p>
+
+    <div class="tablewrap" style="margin-top:26px">
+      <table>
+        <thead><tr><th>Stop</th><th>April 2027 verdict</th><th>What's back</th><th>Watch / confirm</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Tyrrell Bay, Carriacou</strong><br><span class="cap">clear-out / clear-in point</span></td>
+            <td><span class="pill ok"><span class="d"></span>Viable</span></td>
+            <td>"Green again" by 2025; customs office at the marina; fuel &amp; provisioning; <strong>Las Iguanas</strong> &amp; <strong>Lambi&nbsp;Queen</strong> open.</td>
+            <td>Some dismasted wrecks may linger in the bay. <strong>Lazy Turtle &amp; Slipway</strong> status <span class="est">confirm</span>.</td>
+          </tr>
+          <tr>
+            <td><strong>Clifton, Union Island</strong><br><span class="cap">SVG clear-in</span></td>
+            <td><span class="pill ok"><span class="d"></span>Viable</span></td>
+            <td>Customs/immigration <strong>functional</strong> — temporary office behind Bougainvilla Bar. AYC marina open (VHF&nbsp;68), Erika's agents, ferry + new terminal running.</td>
+            <td>Town still storm-marked (roofs, debris). <strong>Happy Island</strong> rebuilding — hail on VHF to confirm it's serving.</td>
+          </tr>
+          <tr>
+            <td><strong>Salt Whistle Bay, Mayreau</strong></td>
+            <td><span class="pill warn"><span class="d"></span>Likely — verify</span></td>
+            <td>EC$2.1M spit restoration underway; "yachties set sail as restored" reporting. <strong>Robert Righteous</strong> rebuilding.</td>
+            <td>The famous sand-spit &amp; sheltered pool may not be fully back. <strong>Fallback: Saline Bay</strong> (Dennis's Hideaway) same island.</td>
+          </tr>
+          <tr>
+            <td><strong>Tobago Cays Marine Park</strong><br><span class="cap">the marquee stop</span></td>
+            <td><span class="pill ok"><span class="d"></span>Fully viable</span></td>
+            <td>Mooring field in use; <strong>Romeo's BBQ</strong> operating (VHF "Romeo"); fees now paid <strong>online</strong> (tcmp.reefsupport.org).</td>
+            <td>Reef still recovering post-Beryl + bleaching; Petit&nbsp;Tabac anchoring zone removed. Manage snorkel expectations on damaged sections.</td>
+          </tr>
+          <tr>
+            <td><strong>Petite Martinique</strong></td>
+            <td><span class="pill warn"><span class="d"></span>Anchorage only</span></td>
+            <td>Viable as an anchorage / cultural stop; Business Reactivation Fund rebuilding livelihoods.</td>
+            <td><strong>Palm Beach Restaurant</strong> <span class="est">confirm</span>. <strong>No reliable yacht fuel</strong> — fuel at Tyrrell Bay or Port Louis instead.</td>
+          </tr>
+          <tr>
+            <td><strong>Sandy Island · Chatham Bay</strong></td>
+            <td><span class="pill ok"><span class="d"></span>Viable</span></td>
+            <td>Sandy Island a fine snorkel day-stop. Chatham: <strong>Sunn&nbsp;Dipp</strong> open, Tenuta resort rebuilding &amp; offering clearance (~EC$100).</td>
+            <td>Sandy Island's north reef still recovering. Chatham beach bars "returning under makeshift conditions" — confirm which are open.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:44px">Clearance has changed since 2020 — and it's simpler</h3>
+    <div class="cols" style="margin-top:16px">
+      <div class="card">
+        <div class="cap">The system</div>
+        <h4>SailClear replaced eSeaClear</h4>
+        <p style="font-size:.94rem;color:var(--ink-2)">A single mandatory pre-arrival portal used by <strong>both SVG and Grenada</strong>. Register the crew and vessel online, then present at the C&amp;I office. <strong>US$25/year</strong> flat (since May 2024), unlimited clearances across participating countries.</p>
+        <p style="font-size:.86rem;color:var(--ink-3);margin:0"><span class="pill teal"><span class="d"></span>Register before you fly</span></p>
+      </div>
+      <div class="card">
+        <div class="cap">Smartest clear-in</div>
+        <h4>Clifton works; Bequia is smoother</h4>
+        <p style="font-size:.94rem;color:var(--ink-2);margin:0">Northbound from Grenada, <strong>Clifton</strong> is the natural (if basic, temporary-office) SVG gateway. If your route allows, <strong>Bequia (Port Elizabeth)</strong> is undamaged, best-serviced and the more comfortable option. On the Grenada side, <strong>Port Louis / Prickly Bay</strong> or <strong>Tyrrell Bay</strong> for a northbound border crossing.</p>
+      </div>
+    </div>
+
+    <div class="tablewrap" style="margin-top:20px">
+      <table>
+        <caption>Official fees, crew of 6, ~45 ft cat, weekday hours. EC$2.70 = US$1. Overtime (after 16:00, weekends) adds ~EC$35+.</caption>
+        <thead><tr><th>Item</th><th class="tnum">EC$</th><th class="tnum">US$</th><th>Note vs 2020</th></tr></thead>
+        <tbody>
+          <tr><td>SailClear subscription (annual)</td><td class="tnum">~68</td><td class="tnum">~25</td><td>New since 2020 — one flat fee</td></tr>
+          <tr><td>SVG cruise tax — EC$35 × 6 pax</td><td class="tnum">210</td><td class="tnum">78</td><td>~In line with your 2020 ~EC$140 (now per-person)</td></tr>
+          <tr><td>Grenada clearance (customs + nav aids)</td><td class="tnum">~105</td><td class="tnum">~39</td><td>Length-based; weekday</td></tr>
+          <tr><td>Tobago Cays — 1 night, 6 pax (EC$15pp + EC$60 mooring)</td><td class="tnum">150</td><td class="tnum">56</td><td>Up from ~EC$45+EC$10pp; pay online now</td></tr>
+          <tr class="total"><td>Indicative official-fee floor</td><td class="tnum">533</td><td class="tnum">198</td><td>Before any overtime</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 · FLIGHTS ============ -->
+<section id="flights">
+  <div class="wrap">
+    <div class="sechead"><span class="num">02</span><span class="eyebrow">Deliverable 1 · Flights</span></div>
+    <h2 style="max-width:22ch">Three cities, one island, and the once-daily bottleneck.</h2>
+    <p class="section-intro">SEA, PHX and DFW all funnel through the same eastern/southern hubs — <strong>MIA, CLT</strong> (American), <strong>ATL</strong> (Delta), <strong>JFK/BOS</strong> (JetBlue). There is <strong>no West-Coast nonstop</strong> to any of the three islands, and the island legs are <strong>once-daily</strong>. That single fact drives the whole flight plan.</p>
+
+    <div class="stats" style="margin-top:26px">
+      <div class="stat"><div class="n">0</div><div class="l">West-coast nonstops to GND/UVF/SVD</div></div>
+      <div class="stat"><div class="n">1×<small>/day</small></div><div class="l">Island leg frequency (miss = +24h)</div></div>
+      <div class="stat"><div class="n">Mar 28</div><div class="l">Easter 2027 → all April is shoulder</div></div>
+      <div class="stat"><div class="n">+1–2</div><div class="l">Days early to arrive (non-negotiable)</div></div>
+    </div>
+
+    <h3 style="margin-top:44px">Nonstop mainland service by island</h3>
+    <div class="tablewrap" style="margin-top:14px">
+      <table>
+        <thead><tr><th>Airport</th><th>US nonstops (carrier · hub)</th><th>Resilience</th></tr></thead>
+        <tbody>
+          <tr><td><strong>GND</strong> · Grenada<br><span class="cap">round-trip base</span></td><td>American <span class="mono">MIA</span> (daily) &amp; <span class="mono">CLT</span> (seas.) · Delta <span class="mono">ATL</span> · JetBlue <span class="mono">JFK</span> (daily), only nonstop <span class="mono">BOS</span></td><td><span class="pill ok"><span class="d"></span>Strong — 3 carriers</span></td></tr>
+          <tr><td><strong>UVF</strong> · St Lucia<br><span class="cap">one-way start</span></td><td>American <span class="mono">CLT</span>/<span class="mono">MIA</span> · Delta <span class="mono">ATL</span> · JetBlue <span class="mono">JFK</span> (+BOS seas.) · United <span class="mono">ORD</span> seas.</td><td><span class="pill ok"><span class="d"></span>Strongest — most frequencies</span></td></tr>
+          <tr><td><strong>SVD</strong> · St Vincent<br><span class="cap">wildcard</span></td><td>American <span class="mono">MIA</span> (daily exc. Tue) · Caribbean Airlines via <span class="mono">POS</span>/<span class="mono">BGI</span></td><td><span class="pill warn"><span class="d"></span>Thin — AA/Miami-centric</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cols" style="margin-top:26px">
+      <div class="chart">
+        <div class="ct">Estimated April 2027 round-trip fares</div>
+        <div class="cs">Economy · shoulder season · USD · ranges, not quotes</div>
+        <svg viewBox="0 0 520 250" role="img" aria-label="Range chart of estimated round-trip economy fares by origin city to Grenada and St Lucia.">
+          <!-- axis -->
+          <g font-family="var(--mono)" font-size="10" fill="var(--ink-3)">
+            <line x1="120" y1="30" x2="120" y2="200" stroke="var(--surface-ring)"/>
+            <line x1="220" y1="30" x2="220" y2="200" stroke="var(--surface-ring)" stroke-dasharray="2 3"/>
+            <line x1="320" y1="30" x2="320" y2="200" stroke="var(--surface-ring)" stroke-dasharray="2 3"/>
+            <line x1="420" y1="30" x2="420" y2="200" stroke="var(--surface-ring)" stroke-dasharray="2 3"/>
+            <line x1="500" y1="30" x2="500" y2="200" stroke="var(--surface-ring)" stroke-dasharray="2 3"/>
+            <text x="120" y="218" text-anchor="middle">$400</text>
+            <text x="220" y="218" text-anchor="middle">$600</text>
+            <text x="320" y="218" text-anchor="middle">$800</text>
+            <text x="420" y="218" text-anchor="middle">$1000</text>
+          </g>
+          <!-- scale: $ -> x, 400->120, +$2 per px? 200 range over 100px => $2/px. x = 120 + (val-400)/2 -->
+          <g font-family="var(--mono)" font-size="11">
+            <!-- rows: SEA, PHX, DFW ; two bars each GND(teal), UVF(blue) -->
+            <!-- SEA -->
+            <text x="16" y="52" fill="var(--ink)" font-weight="600">SEA</text>
+            <line x1="245" y1="48" x2="395" y2="48" stroke="var(--s1)" stroke-width="7" stroke-linecap="round"/>
+            <text x="405" y="52" fill="var(--ink-3)">GND 650–950</text>
+            <line x1="195" y1="66" x2="345" y2="66" stroke="var(--s3)" stroke-width="7" stroke-linecap="round"/>
+            <text x="355" y="70" fill="var(--ink-3)">UVF 550–850</text>
+            <!-- PHX -->
+            <text x="16" y="108" fill="var(--ink)" font-weight="600">PHX</text>
+            <line x1="220" y1="104" x2="370" y2="104" stroke="var(--s1)" stroke-width="7" stroke-linecap="round"/>
+            <text x="380" y="108" fill="var(--ink-3)">GND 600–900</text>
+            <line x1="170" y1="122" x2="320" y2="122" stroke="var(--s3)" stroke-width="7" stroke-linecap="round"/>
+            <text x="330" y="126" fill="var(--ink-3)">UVF 500–800</text>
+            <!-- DFW -->
+            <text x="16" y="164" fill="var(--ink)" font-weight="600">DFW</text>
+            <line x1="220" y1="160" x2="395" y2="160" stroke="var(--s1)" stroke-width="7" stroke-linecap="round"/>
+            <text x="405" y="164" fill="var(--ink-3)">GND 600–950</text>
+            <line x1="145" y1="178" x2="295" y2="178" stroke="var(--s3)" stroke-width="7" stroke-linecap="round"/>
+            <text x="305" y="182" fill="var(--ink-3)">UVF 450–750</text>
+          </g>
+        </svg>
+        <div class="clegend">
+          <div class="li"><span class="sw" style="background:var(--s1)"></span>To Grenada (GND)</div>
+          <div class="li"><span class="sw" style="background:var(--s3)"></span>To St Lucia (UVF)</div>
+        </div>
+      </div>
+      <div class="card" style="display:flex;flex-direction:column;gap:14px;justify-content:center">
+        <div>
+          <div class="cap">Same-day from the West Coast?</div>
+          <h4 style="margin:4px 0">DFW yes · PHX marginal · SEA red-eye only</h4>
+          <p style="font-size:.92rem;color:var(--ink-2);margin:6px 0 0">The island flight leaves the US hub mid-morning. A normal PHX–MIA lands <em>after</em> it's gone. <strong>Overnight at MIA/CLT</strong> converts a fragile connection into a robust two-segment plan.</p>
+        </div>
+        <div class="rule" style="margin:2px 0"></div>
+        <div>
+          <div class="cap">Baggage — soft duffels, exactly right</div>
+          <p style="font-size:.92rem;color:var(--ink-2);margin:6px 0 0">If any leg uses SVG&nbsp;Air / interCaribbean turboprops: <strong>44&nbsp;lb free first bag, 70&nbsp;lb hard cap</strong> (over → freight, space-available), carry-on <strong>≤13&nbsp;lb</strong>. Keep each duffel ≤44&nbsp;lb and split weight across people.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top:24px">
+      <div class="lab">✈ The arrival rule — with the delay math</div>
+      <p style="margin:0 0 8px"><strong>Arrive on-island no later than the day before a Thursday check-in — Tuesday for the SEA/PHX crews.</strong> Island legs are once-daily: a missed connection isn't "the next flight in two hours," it's <strong>+24 hours</strong>, and a Wednesday-for-Thursday plan has effectively zero slack. A Tuesday arrival buys a full recovery day.</p>
+      <p style="margin:0;font-size:.9rem;color:var(--ink-3)"><strong>Templates —</strong> DFW: single AA ticket via MIA/CLT, arrive Wed. PHX: fly to MIA, overnight, morning island flight, arrive Tue. SEA: overnight-at-hub (preferred) or SEA–MIA red-eye (high-risk), arrive Tue. For the one-way plan, position via <strong>Barbados (BGI)</strong> on interCaribbean/LIAT and add a buffer day.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3 · CHARTER MATRIX ============ -->
+<section id="fleet" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sechead"><span class="num">03</span><span class="eyebrow">Deliverable 2 · Charter Company Matrix</span></div>
+    <h2 style="max-width:22ch">Only two operators can sail you one-way. That decides a lot.</h2>
+    <p class="section-intro">The pivotal finding: <strong>only The Moorings and Sunsail</strong> run bases in both Grenada and St&nbsp;Lucia, so only they sell the <strong>St&nbsp;Lucia → Grenada bareboat one-way</strong>. Dream (your 2020 operator) is now Grenada-only. Everyone else is single-island in this region.</p>
+
+    <div class="tablewrap" style="margin-top:26px">
+      <table>
+        <caption>Base coverage &amp; one-way capability. "One-way StL→Gnd" is the itinerary-defining column.</caption>
+        <thead><tr><th>Company</th><th>Grenada base</th><th>St Lucia base</th><th>One-way StL→Gnd</th></tr></thead>
+        <tbody>
+          <tr class="hi"><td><strong>The Moorings</strong></td><td>Port Louis Marina</td><td>Rodney Bay Marina</td><td><span class="pill ok"><span class="d"></span>Yes · $2,100</span></td></tr>
+          <tr class="hi"><td><strong>Sunsail</strong></td><td>Port Louis Marina</td><td>Rodney Bay Marina</td><td><span class="pill ok"><span class="d"></span>Yes · $2,100</span></td></tr>
+          <tr><td><strong>Dream Yacht Worldwide</strong> <span class="cap">(2020 booking)</span></td><td>Port Louis Marina</td><td>—</td><td><span class="pill bad"><span class="d"></span>No</span></td></tr>
+          <tr><td><strong>Horizon Yacht Charters</strong></td><td>True Blue Bay</td><td>—</td><td><span class="pill warn"><span class="d"></span>Only St Vincent↔Gnd</span></td></tr>
+          <tr><td>Navigare · TMM · Waypoints</td><td>—</td><td>—</td><td><span class="pill bad"><span class="d"></span>No base here</span></td></tr>
+          <tr><td>Barefoot Yacht Charters</td><td>—</td><td>—</td><td><span class="pill bad"><span class="d"></span>St Vincent only</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 style="margin-top:40px">The three that matter — side by side</h3>
+    <div class="tablewrap" style="margin-top:14px">
+      <table>
+        <thead><tr><th>Factor</th><th>The Moorings</th><th>Sunsail</th><th>Dream Yacht</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Best-fit boat (6 pax)</strong></td><td>4500L · Leopard 45<br><span class="cap">4 cab / 4 head</span></td><td>454L · Leopard 45<br><span class="cap">4 cab / 4 head</span></td><td>Bali 4.2<br><span class="cap">4+2 cab / 4 head</span></td></tr>
+          <tr><td><strong>Fleet age</strong></td><td>~2022–26 hulls</td><td>~2022–26 hulls</td><td>~3–6 yrs, owner-managed</td></tr>
+          <tr><td><strong>April week (est.)</strong></td><td class="tnum">$8,000–11,000</td><td class="tnum">$6,500–9,500</td><td class="tnum">$5,500–8,000</td></tr>
+          <tr><td><strong>Extras posture</strong></td><td>Sleep-aboard ~70% daily rate; SUP/gen/watermaker by trim</td><td>Same network extras; value trim</td><td>"Essentials" pack bundles waiver + clean + starter → <strong>$0 deposit</strong></td></tr>
+          <tr><td><strong>Deposit / waiver</strong></td><td>Refundable $825–6,250 by size, or non-refundable YDW</td><td>Same structure</td><td>Waiver at booking + reduced deposit, or Essentials for zero</td></tr>
+          <tr><td><strong>Cancellation</strong> <span class="cap">(2020 pain point)</span></td><td><span class="pill warn"><span class="d"></span>Strict</span> deposit non-refundable; 100% inside 180d. Fix: 12-mo credit + CFAR</td><td><span class="pill warn"><span class="d"></span>Strict</span> same terms. Fix: Flex Protection Plan + CFAR</td><td><span class="pill ok"><span class="d"></span>Friendlier</span> only 30% at risk &gt;60d; lose all ≤59d</td></tr>
+          <tr><td><strong>One-way?</strong></td><td>Yes</td><td>Yes</td><td>No (round-trip Grenada only)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="cols" style="margin-top:26px">
+      <div class="callout win">
+        <div class="lab">◆ Primary pick</div>
+        <p style="margin:0 0 6px"><strong>Moorings 4500L (Leopard 45), one-way Rodney Bay → Port Louis.</strong> It's the only way to sail your exact route; a true 4-cabin/4-head gives six people three doubles + a spare and four bathrooms; youngest, most standardized fleet with the best base briefing for a <strong>Level-3</strong> destination.</p>
+        <p style="margin:0;font-size:.9rem;color:var(--ink-3)">Choose near-identical <strong>Sunsail 454L</strong> to shave ~10–20% and get the Flex Protection Plan instead.</p>
+      </div>
+      <div class="callout">
+        <div class="lab">◇ Value alternative</div>
+        <p style="margin:0 0 6px"><strong>Dream Yacht Bali 4.2, round-trip Grenada.</strong> Likely cheaper, the open-transom Bali layout is superb for a group of six, and the deposit ladder is genuinely friendlier at long lead times. The trade: you give up the one-way and sail the Grenadines out-and-back.</p>
+        <p style="margin:0;font-size:.9rem;color:var(--ink-3)">This is the pick if flexibility on the deposit outweighs the one-way romance.</p>
+      </div>
+    </div>
+    <div class="callout hazard" style="margin-top:20px">
+      <div class="lab">▲ Do this at deposit, not later</div>
+      <p style="margin:0">The flexibility that saves you if 2020 repeats is <strong>not</strong> an automatic guarantee — it's bought up front. On Moorings/Sunsail, buy the <strong>Cancel-For-Any-Reason rider (Trip Mate)</strong> and lean on the <strong>12-month refund credit / Flex Protection Plan</strong>. Travel insurance is a condition of booking anyway.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · ITINERARIES ============ -->
+<section id="itineraries">
+  <div class="wrap">
+    <div class="sechead"><span class="num">04</span><span class="eyebrow">Deliverable 3 · Itinerary Options</span></div>
+    <h2 style="max-width:24ch">Four routes, honestly costed in miles and trade-offs.</h2>
+    <p class="section-intro">All at 6&nbsp;kn planning speed, with clearance points and one restaurant + one activity per stop (your 2020 shortlist, where the venue survived). Everything Grenada→Bequia is short lee-side island-hopping; the <strong>only true open-ocean legs</strong> are the Bequia↔St&nbsp;Vincent↔St&nbsp;Lucia channel crossings.</p>
+
+    <div class="chart" style="margin-top:26px">
+      <div class="ct">Total distance &amp; hardest single day, by option</div>
+      <div class="cs">Nautical miles · at 6 kn ≈ hours ÷ 6 · hardest-day marker in coral</div>
+      <svg viewBox="0 0 640 250" role="img" aria-label="Bar chart comparing total nautical miles for the four itinerary options with the hardest single-day leg marked.">
+        <!-- scale: 0..180nm over x 150..600 => 2.5px/nm -->
+        <g font-family="var(--mono)" font-size="10" fill="var(--ink-3)">
+          <line x1="150" y1="20" x2="150" y2="210" stroke="var(--surface-ring)"/>
+          <line x1="275" y1="20" x2="275" y2="210" stroke="var(--surface-ring)" stroke-dasharray="2 3"/><text x="275" y="228" text-anchor="middle">50</text>
+          <line x1="400" y1="20" x2="400" y2="210" stroke="var(--surface-ring)" stroke-dasharray="2 3"/><text x="400" y="228" text-anchor="middle">100</text>
+          <line x1="525" y1="20" x2="525" y2="210" stroke="var(--surface-ring)" stroke-dasharray="2 3"/><text x="525" y="228" text-anchor="middle">150</text>
+          <text x="150" y="228" text-anchor="middle">0 nm</text>
+        </g>
+        <g font-family="var(--mono)" font-size="11">
+          <!-- A total 130, hardest 34 -->
+          <text x="16" y="46" fill="var(--ink)" font-weight="600">A · 7d RT</text>
+          <rect x="150" y="34" width="325" height="18" rx="4" fill="var(--s1)"/><text x="484" y="47" fill="var(--ink)">130</text>
+          <rect x="235" y="30" width="4" height="26" fill="var(--s2)"/>
+          <!-- B total 145, hardest 34 -->
+          <text x="16" y="90" fill="var(--ink)" font-weight="600">B · 10d RT</text>
+          <rect x="150" y="78" width="362" height="18" rx="4" fill="var(--s1)"/><text x="521" y="91" fill="var(--ink)">145</text>
+          <rect x="235" y="74" width="4" height="26" fill="var(--s2)"/>
+          <!-- C total 135, hardest 58 -->
+          <text x="16" y="134" fill="var(--ink)" font-weight="600">C · 7d 1-way</text>
+          <rect x="150" y="122" width="337" height="18" rx="4" fill="var(--s3)"/><text x="496" y="135" fill="var(--ink)">135</text>
+          <rect x="295" y="118" width="4" height="26" fill="var(--s2)"/>
+          <!-- D total 165, hardest 55 -->
+          <text x="16" y="178" fill="var(--ink)" font-weight="600">D · 10d 1-way</text>
+          <rect x="150" y="166" width="412" height="18" rx="4" fill="var(--s3)"/><text x="571" y="179" fill="var(--ink)">165</text>
+          <rect x="288" y="162" width="4" height="26" fill="var(--s2)"/>
+        </g>
+      </svg>
+      <div class="clegend">
+        <div class="li"><span class="sw" style="background:var(--s1)"></span>Round trip (Grenada)</div>
+        <div class="li"><span class="sw" style="background:var(--s3)"></span>One-way (St Lucia → Grenada)</div>
+        <div class="li"><span class="sw" style="background:var(--s2);border-radius:1px;width:5px;height:14px"></span>Hardest single day (nm)</div>
+      </div>
+    </div>
+
+    <div class="grid" style="grid-template-columns:1fr 1fr;margin-top:28px">
+      <!-- OPTION A -->
+      <div class="optcard">
+        <div class="top">
+          <span class="badge">Option A · Round trip</span>
+          <h3>The 2020 route, compressed to 7 days</h3>
+          <div class="facts">
+            <span class="pill"><span class="d"></span>~130 nm</span>
+            <span class="pill teal">Cuts Mustique</span>
+            <span class="pill">Hardest: Union→Grenada 34nm</span>
+          </div>
+        </div>
+        <div class="minimap"><svg viewBox="0 0 440 172" role="img" aria-label="Route map, Option A: Grenada round trip via Carriacou, Union, Tobago Cays and Bequia.">
+          <rect width="440" height="172" fill="var(--sea)"/>
+          <g stroke="var(--sea-line)" stroke-width="1" opacity=".7"><path d="M60 150 118 122 165 101 196 91 216 82 256 74 272 60 288 50 362 42 402 26" fill="none" stroke-dasharray="2 5"/></g>
+          <g fill="var(--sand)" stroke="var(--gold)" stroke-width=".6" opacity=".85"><circle cx="60" cy="150" r="12"/><circle cx="118" cy="122" r="7"/><circle cx="165" cy="101" r="6"/><circle cx="196" cy="91" r="3.5"/><circle cx="272" cy="60" r="7"/><circle cx="288" cy="50" r="9"/><circle cx="362" cy="42" r="10"/></g>
+          <polyline points="60,150 118,122 165,101 196,91 272,60 168,104 62,153" fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-dasharray="3 5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2"><circle cx="118" cy="122" r="4"/><circle cx="165" cy="101" r="4"/><circle cx="196" cy="91" r="4"/><circle cx="272" cy="60" r="4"/></g>
+          <rect x="54" y="144" width="11" height="11" rx="2" transform="rotate(45 60 150)" fill="var(--teal)"/>
+          <g font-family="var(--mono)" font-size="9.5" fill="var(--ink-2)"><text x="60" y="168" text-anchor="middle">GND ⟳</text><text x="210" y="106">Tobago Cays</text><text x="278" y="54">Bequia</text></g>
+        </svg></div>
+        <div class="body">
+          <div class="dayrow"><span class="d">Thu</span><span>Board Grenada · provision · sleep aboard</span><span class="nm">—</span></div>
+          <div class="dayrow"><span class="d">Fri</span><span>Grenada → Tyrrell Bay <span class="cap">clear out</span></span><span class="nm">33 nm</span></div>
+          <div class="dayrow"><span class="d">Sat</span><span>→ Clifton <span class="cap">clear into SVG</span> → Tobago Cays</span><span class="nm">16 nm</span></div>
+          <div class="dayrow"><span class="d">Sun</span><span>Tobago Cays lay day · turtles · Romeo BBQ</span><span class="nm">0 nm</span></div>
+          <div class="dayrow"><span class="d">Mon</span><span>Tobago Cays → Bequia · Admiralty Bay</span><span class="nm">22 nm</span></div>
+          <div class="dayrow"><span class="d">Tue</span><span>Bequia → Chatham Bay <span class="cap">clear out SVG</span></span><span class="nm">25 nm</span></div>
+          <div class="dayrow"><span class="d">Wed</span><span>→ Grenada · Port Louis <span class="cap">clear in</span></span><span class="nm">34 nm</span></div>
+          <p style="font-size:.84rem;color:var(--ink-3);margin:12px 0 0"><strong>Best snorkel:</strong> Tobago Cays turtle sanctuary. <strong>Honest cost of the cut:</strong> you lose Mustique/Basil's and the lay day gets squeezed — the trip becomes a delivery with highlights, not a cruise. <strong>Skip-if-forecast-turns:</strong> drop the Bequia→Chatham 25nm and stage from Union instead.</p>
+        </div>
+      </div>
+
+      <!-- OPTION B -->
+      <div class="optcard">
+        <div class="top">
+          <span class="badge">Option B · Round trip</span>
+          <h3>The 2020 route + upgrades, 10 days</h3>
+          <div class="facts">
+            <span class="pill"><span class="d"></span>~145 nm</span>
+            <span class="pill teal">+Sandy I · Chatham · 2nd Bequia</span>
+            <span class="pill">Hardest: Union→Grenada 34nm</span>
+          </div>
+        </div>
+        <div class="minimap"><svg viewBox="0 0 440 172" role="img" aria-label="Route map, Option B: Grenada round trip adding Sandy Island, Chatham, Canouan, Mustique and a second Bequia night.">
+          <rect width="440" height="172" fill="var(--sea)"/>
+          <g stroke="var(--sea-line)" stroke-width="1" opacity=".7"><path d="M60 150 118 122 165 101 196 91 216 82 256 74 272 60 288 50 362 42 402 26" fill="none" stroke-dasharray="2 5"/></g>
+          <g fill="var(--sand)" stroke="var(--gold)" stroke-width=".6" opacity=".85"><circle cx="60" cy="150" r="12"/><circle cx="118" cy="122" r="7"/><circle cx="165" cy="101" r="6"/><circle cx="196" cy="91" r="3.5"/><circle cx="216" cy="82" r="5"/><circle cx="256" cy="74" r="4.5"/><circle cx="272" cy="60" r="7"/><circle cx="288" cy="50" r="9"/></g>
+          <polyline points="60,150 118,122 165,101 196,91 216,82 256,74 272,60 168,104 62,153" fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-dasharray="3 5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2"><circle cx="118" cy="122" r="4"/><circle cx="165" cy="101" r="4"/><circle cx="196" cy="91" r="4"/><circle cx="216" cy="82" r="4"/><circle cx="256" cy="74" r="4"/><circle cx="272" cy="60" r="4"/></g>
+          <rect x="54" y="144" width="11" height="11" rx="2" transform="rotate(45 60 150)" fill="var(--teal)"/>
+          <g font-family="var(--mono)" font-size="9.5" fill="var(--ink-2)"><text x="60" y="168" text-anchor="middle">GND ⟳</text><text x="248" y="90">Mustique</text><text x="278" y="54">Bequia</text></g>
+        </svg></div>
+        <div class="body">
+          <div class="dayrow"><span class="d">Thu</span><span>Board Grenada · provision</span><span class="nm">—</span></div>
+          <div class="dayrow"><span class="d">Fri</span><span>Grenada → Tyrrell Bay <span class="cap">lee coast to Sauteurs; mind Kick 'em Jenny</span></span><span class="nm">33 nm</span></div>
+          <div class="dayrow"><span class="d">Sat</span><span>Sandy Island snorkel → Clifton <span class="cap">clear SVG</span> → Chatham</span><span class="nm">13 nm</span></div>
+          <div class="dayrow"><span class="d">Sun</span><span>Chatham → Salt Whistle → Tobago Cays</span><span class="nm">8 nm</span></div>
+          <div class="dayrow"><span class="d">Mon</span><span>Tobago Cays lay · turtles · PSV/Mopion · Romeo</span><span class="nm">0 nm</span></div>
+          <div class="dayrow"><span class="d">Tue</span><span>Tobago Cays → Canouan · Glossy Bay</span><span class="nm">8 nm</span></div>
+          <div class="dayrow"><span class="d">Wed</span><span>Canouan → Mustique · Basil's</span><span class="nm">12 nm</span></div>
+          <div class="dayrow"><span class="d">Thu</span><span>Mustique → Bequia</span><span class="nm">12 nm</span></div>
+          <div class="dayrow"><span class="d">Fri</span><span>Bequia 2nd night · Princess Margaret · boatbuilders</span><span class="nm">0 nm</span></div>
+          <div class="dayrow"><span class="d">Sat</span><span>Bequia → Union/Chatham <span class="cap">clear out</span></span><span class="nm">25 nm</span></div>
+          <div class="dayrow"><span class="d">Sun</span><span>→ Grenada · Port Louis <span class="cap">clear in</span></span><span class="nm">34 nm</span></div>
+          <p style="font-size:.84rem;color:var(--ink-3);margin:12px 0 0"><strong>Best snorkel:</strong> Tobago Cays + Sandy Island. <strong>This is the fullest round-trip.</strong> <strong>Skip-if-forecast-turns:</strong> collapse Canouan and go Tobago Cays→Mustique direct (18nm) if a channel day looks rough.</p>
+        </div>
+      </div>
+
+      <!-- OPTION C -->
+      <div class="optcard">
+        <div class="top">
+          <span class="badge oneway">Option C · One-way</span>
+          <h3>St Lucia → Grenada, 7 days</h3>
+          <div class="facts">
+            <span class="pill"><span class="d"></span>~135 nm</span>
+            <span class="pill teal">Pitons + Grenadines</span>
+            <span class="pill bad">Hardest: Pitons→Bequia 55–60nm</span>
+          </div>
+        </div>
+        <div class="minimap"><svg viewBox="0 0 440 172" role="img" aria-label="Route map, Option C: one-way St Lucia to Grenada via the Pitons, Bequia, Tobago Cays and Carriacou.">
+          <rect width="440" height="172" fill="var(--sea)"/>
+          <g stroke="var(--sea-line)" stroke-width="1" opacity=".7"><path d="M60 150 118 122 165 101 196 91 216 82 256 74 272 60 288 50 362 42 402 26" fill="none" stroke-dasharray="2 5"/></g>
+          <g fill="var(--sand)" stroke="var(--gold)" stroke-width=".6" opacity=".85"><circle cx="60" cy="150" r="12"/><circle cx="118" cy="122" r="7"/><circle cx="165" cy="101" r="6"/><circle cx="196" cy="91" r="3.5"/><circle cx="272" cy="60" r="7"/><circle cx="288" cy="50" r="9"/><circle cx="362" cy="42" r="10"/><circle cx="402" cy="26" r="11"/></g>
+          <polyline points="402,26 362,42 272,60 196,91 165,101 118,122 60,150" fill="none" stroke="var(--coral)" stroke-width="2.2" stroke-dasharray="3 5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2"><circle cx="362" cy="42" r="4"/><circle cx="272" cy="60" r="4"/><circle cx="196" cy="91" r="4"/><circle cx="165" cy="101" r="4"/><circle cx="118" cy="122" r="4"/></g>
+          <rect x="54" y="144" width="11" height="11" rx="2" transform="rotate(45 60 150)" fill="var(--teal)"/>
+          <rect x="396" y="20" width="11" height="11" rx="2" transform="rotate(45 402 26)" fill="var(--teal)"/>
+          <g font-family="var(--mono)" font-size="9.5" fill="var(--ink-2)"><text x="60" y="168" text-anchor="middle">GND finish</text><text x="402" y="14" text-anchor="middle">SLU start</text><text x="332" y="40" text-anchor="end">Pitons</text></g>
+        </svg></div>
+        <div class="body">
+          <div class="dayrow"><span class="d">Thu</span><span>Board Rodney Bay, St Lucia · provision</span><span class="nm">—</span></div>
+          <div class="dayrow"><span class="d">Fri</span><span>Rodney Bay → Soufrière/Pitons <span class="cap">SMMA mooring</span> · Sulphur Springs</span><span class="nm">20 nm</span></div>
+          <div class="dayrow"><span class="d">Sat</span><span>Pitons → Bequia <span class="cap">dawn start; bypass SV mainland; clear SVG</span></span><span class="nm">58 nm</span></div>
+          <div class="dayrow"><span class="d">Sun</span><span>Bequia → Tobago Cays · turtles · Romeo</span><span class="nm">22 nm</span></div>
+          <div class="dayrow"><span class="d">Mon</span><span>Tobago Cays → Clifton <span class="cap">clear out</span> → Chatham</span><span class="nm">6 nm</span></div>
+          <div class="dayrow"><span class="d">Tue</span><span>Union → Tyrrell Bay, Carriacou <span class="cap">clear into Grenada</span></span><span class="nm">13 nm</span></div>
+          <div class="dayrow"><span class="d">Wed</span><span>Carriacou → Grenada · Port Louis <span class="cap">mind Kick 'em Jenny</span></span><span class="nm">34 nm</span></div>
+          <p style="font-size:.84rem;color:var(--ink-3);margin:12px 0 0"><strong>Best snorkel:</strong> Tobago Cays. <strong>The St Vincent question:</strong> we bypass the mainland — a dawn Pitons→Bequia run is safer and simpler than an overnight at Wallilabou/Cumberland (see §5 security). <strong>Skip-if-forecast-turns:</strong> if the channel's ugly, break at Wallilabou in daylight on a trusted mooring, then hop to Bequia next morning.</p>
+        </div>
+      </div>
+
+      <!-- OPTION D -->
+      <div class="optcard" style="border-color:var(--teal)">
+        <div class="top" style="background:color-mix(in srgb,var(--teal) 8%,var(--surface))">
+          <span class="badge oneway">Option D · One-way · ★ Recommended</span>
+          <h3>The everything route — 10 days, StL → Gnd</h3>
+          <div class="facts">
+            <span class="pill teal"><span class="d"></span>~165 nm</span>
+            <span class="pill teal">Pitons · full Grenadines · Petite Martinique</span>
+            <span class="pill bad">Hardest: Pitons→Bequia 55nm</span>
+          </div>
+        </div>
+        <div class="minimap"><svg viewBox="0 0 440 172" role="img" aria-label="Route map, Option D: one-way St Lucia to Grenada, the full route via Marigot, Pitons, Bequia, Mustique, Tobago Cays and Petite Martinique.">
+          <rect width="440" height="172" fill="var(--sea)"/>
+          <g stroke="var(--sea-line)" stroke-width="1" opacity=".7"><path d="M60 150 118 122 165 101 196 91 216 82 256 74 272 60 288 50 362 42 402 26" fill="none" stroke-dasharray="2 5"/></g>
+          <g fill="var(--sand)" stroke="var(--gold)" stroke-width=".6" opacity=".85"><circle cx="60" cy="150" r="12"/><circle cx="118" cy="122" r="7"/><circle cx="140" cy="112" r="3.2"/><circle cx="196" cy="91" r="3.5"/><circle cx="256" cy="74" r="4.5"/><circle cx="272" cy="60" r="7"/><circle cx="288" cy="50" r="9"/><circle cx="362" cy="42" r="10"/><circle cx="380" cy="35" r="5"/><circle cx="402" cy="26" r="11"/></g>
+          <polyline points="402,26 380,35 362,42 272,60 256,74 196,91 140,112 118,122 60,150" fill="none" stroke="var(--coral)" stroke-width="2.4" stroke-dasharray="3 5" stroke-linecap="round" stroke-linejoin="round"/>
+          <g fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2"><circle cx="380" cy="35" r="4"/><circle cx="362" cy="42" r="4"/><circle cx="272" cy="60" r="4"/><circle cx="256" cy="74" r="4"/><circle cx="196" cy="91" r="4"/><circle cx="140" cy="112" r="4"/><circle cx="118" cy="122" r="4"/></g>
+          <rect x="54" y="144" width="11" height="11" rx="2" transform="rotate(45 60 150)" fill="var(--teal)"/>
+          <rect x="396" y="20" width="11" height="11" rx="2" transform="rotate(45 402 26)" fill="var(--teal)"/>
+          <g font-family="var(--mono)" font-size="9.5" fill="var(--ink-2)"><text x="60" y="168" text-anchor="middle">GND finish</text><text x="402" y="14" text-anchor="middle">SLU start</text><text x="192" y="106">Tobago Cays</text></g>
+        </svg></div>
+        <div class="body">
+          <div class="dayrow"><span class="d">Thu</span><span>Board Rodney Bay · provision · sleep aboard</span><span class="nm">—</span></div>
+          <div class="dayrow"><span class="d">Fri</span><span>Rodney Bay → Marigot Bay · Rainforest Hideaway</span><span class="nm">8 nm</span></div>
+          <div class="dayrow"><span class="d">Sat</span><span>Marigot → Pitons <span class="cap">SMMA</span> · Gros Piton · Diamond Falls</span><span class="nm">12 nm</span></div>
+          <div class="dayrow"><span class="d">Sun</span><span>Pitons → Bequia <span class="cap">dawn start; clear SVG</span></span><span class="nm">55 nm</span></div>
+          <div class="dayrow"><span class="d">Mon</span><span>Bequia · Princess Margaret Beach · boatbuilders</span><span class="nm">0 nm</span></div>
+          <div class="dayrow"><span class="d">Tue</span><span>Bequia → Mustique · Basil's · Macaroni Beach</span><span class="nm">12 nm</span></div>
+          <div class="dayrow"><span class="d">Wed</span><span>Mustique → Tobago Cays · turtles · Romeo</span><span class="nm">18 nm</span></div>
+          <div class="dayrow"><span class="d">Thu</span><span>Tobago Cays lay day · PSV / Mopion sandbar</span><span class="nm">0 nm</span></div>
+          <div class="dayrow"><span class="d">Fri</span><span>Cays → Clifton <span class="cap">clear out</span> → Petite Martinique → Tyrrell <span class="cap">clear in Gnd</span></span><span class="nm">18 nm</span></div>
+          <div class="dayrow"><span class="d">Sat</span><span>Carriacou → Dragon Bay, Grenada <span class="cap">Molinere sculpture park; mind KeJ</span></span><span class="nm">36 nm</span></div>
+          <div class="dayrow"><span class="d">Sun</span><span>Dragon Bay → Port Louis · disembark Mon</span><span class="nm">4 nm</span></div>
+          <p style="font-size:.84rem;color:var(--ink-3);margin:12px 0 0"><strong>Best snorkel:</strong> Tobago Cays + Molinere Underwater Sculpture Park. <strong>Final night:</strong> Dragon Bay confirmed viable — snorkel the sculptures at dawn before checking out. <strong>Skip-if-forecast-turns:</strong> the Pitons→Bequia leg is the whole plan's pivot; if it won't cooperate, hold at the Pitons a day and compress the Grenadines.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5 · CONDITIONS ============ -->
+<section id="conditions" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sechead"><span class="num">05</span><span class="eyebrow">Deliverable 4 · Conditions &amp; Timing</span></div>
+    <h2 style="max-width:22ch">April is the sweet spot — and here's the exact window.</h2>
+    <p class="section-intro">After the Christmas Winds, before the rains and hurricane season. Steady E/ENE trades, dry, warm water. The two channel crossings are the only legs you plan <em>around</em> the forecast.</p>
+
+    <div class="stats" style="margin-top:26px">
+      <div class="stat"><div class="n">E/ENE</div><div class="l">Prevailing trades</div></div>
+      <div class="stat"><div class="n">12–20<small> kn</small></div><div class="l">Typical strength · avg ~15</div></div>
+      <div class="stat"><div class="n">1–2<small> m</small></div><div class="l">Channel swell (Bequia ch.)</div></div>
+      <div class="stat"><div class="n">~7</div><div class="l">Rainy days (Grenada, month)</div></div>
+      <div class="stat"><div class="n">27°C</div><div class="l">Sea temperature</div></div>
+      <div class="stat"><div class="n">Apr 20</div><div class="l">Full "Pink" Moon 2027</div></div>
+    </div>
+
+    <div class="cols" style="margin-top:28px">
+      <div class="chart">
+        <div class="ct">The season, month by month</div>
+        <div class="cs">Reinforced trades ease into the April window, then the rains build</div>
+        <svg viewBox="0 0 560 220" role="img" aria-label="Seasonal band showing average trade-wind strength from December to June, with April highlighted as the sweet spot.">
+          <!-- zones -->
+          <rect x="60" y="30" width="150" height="120" fill="var(--s2)" opacity=".10"/>
+          <rect x="300" y="30" width="100" height="120" fill="var(--s1)" opacity=".16"/>
+          <rect x="460" y="30" width="60" height="120" fill="var(--s3)" opacity=".12"/>
+          <text x="135" y="24" text-anchor="middle" font-family="var(--mono)" font-size="9.5" fill="var(--s2)" letter-spacing=".08em">CHRISTMAS WINDS</text>
+          <text x="350" y="24" text-anchor="middle" font-family="var(--mono)" font-size="9.5" fill="var(--teal)" letter-spacing=".08em">SWEET SPOT</text>
+          <text x="490" y="24" text-anchor="middle" font-family="var(--mono)" font-size="9.5" fill="var(--s3)" letter-spacing=".08em">RAINS</text>
+          <!-- wind line: Dec18 Jan20 Feb20 Mar16 Apr15 May15 Jun16 ; x 80..520 step ~73; y: 30kn top=30,10kn=150 => y=150-(kn-10)*6 -->
+          <g font-family="var(--mono)" font-size="10" fill="var(--ink-3)">
+            <line x1="60" y1="150" x2="520" y2="150" stroke="var(--surface-ring)"/>
+            <text x="40" y="66" text-anchor="end">25kn</text><line x1="55" y1="60" x2="520" y2="60" stroke="var(--surface-ring)" stroke-dasharray="2 3"/>
+            <text x="40" y="126" text-anchor="end">15kn</text><line x1="55" y1="120" x2="520" y2="120" stroke="var(--surface-ring)" stroke-dasharray="2 3"/>
+          </g>
+          <polyline points="90,102 163,90 236,90 309,114 350,120 423,120 496,114" fill="none" stroke="var(--s1)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- April emphasized point -->
+          <circle cx="350" cy="120" r="6" fill="var(--surface)" stroke="var(--s1)" stroke-width="3"/>
+          <circle cx="350" cy="120" r="6" fill="none" stroke="var(--coral)" stroke-width="1.5"/>
+          <g font-family="var(--mono)" font-size="10" fill="var(--ink-2)" text-anchor="middle">
+            <text x="90" y="168">Dec</text><text x="163" y="168">Jan</text><text x="236" y="168">Feb</text><text x="309" y="168">Mar</text>
+            <text x="350" y="182" fill="var(--coral)" font-weight="600">APR</text><text x="423" y="168">May</text><text x="496" y="168">Jun</text>
+          </g>
+        </svg>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:16px">
+        <div class="card">
+          <div class="cap">The best two weeks</div>
+          <h4 style="margin:4px 0">10–24 April 2027</h4>
+          <p style="font-size:.92rem;color:var(--ink-2);margin:0">Solidly late dry season (ahead of the late-April convective uptick), brackets the <strong>full moon of 20 April</strong> for bright dinghy runs and dawn channel starts, and sits well clear of Easter (Sun 28 Mar). <strong>New moon 6 April</strong> if you'd rather have darker, star-filled nights early.</p>
+        </div>
+        <div class="card">
+          <div class="cap">Plan these two around the forecast</div>
+          <h4 style="margin:4px 0">The channel legs</h4>
+          <p style="font-size:.92rem;color:var(--ink-2);margin:0"><strong>Bequia Channel</strong> — short, steep, wind-against-current, 1–2&nbsp;m on the beam; often the roughest of the trip. <strong>Carriacou→Grenada</strong> — 33&nbsp;nm, more into the trades, start on the morning breeze. Reef early; both are fine for a competent crew on a settled day.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout hazard" style="margin-top:24px">
+      <div class="lab">▲ Kick 'em Jenny — live hazard, standing exclusion zone</div>
+      <p style="margin:0 0 8px">The submarine volcano ~5&nbsp;nm N of Grenada sits at <strong>Alert Yellow</strong> (its permanent baseline — it can't be seen and can erupt without warning) as of 2026; a brief seismic swarm in Aug&nbsp;2025 stayed Yellow. A <strong>1.5&nbsp;km exclusion zone is always in force</strong> (5&nbsp;km at higher alerts). Escaping gas can also sink a boat by cutting water density — this is a keep-clear, not just an eruption risk.</p>
+      <p style="margin:0;font-size:.9rem;color:var(--ink-3)"><strong>Routing:</strong> run up Grenada's calm lee coast to <strong>Sauteurs</strong>, then cross — staying west/seaward of the zone; don't cut between the volcano and Île de Ronde. <strong>Re-check the UWI-SRC / NaDMA alert level the morning you sail north</strong> and widen your offing to 5&nbsp;km if it's above Yellow.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6 · MONEY ============ -->
+<section id="money">
+  <div class="wrap">
+    <div class="sechead"><span class="num">06</span><span class="eyebrow">Deliverable 5 · Money</span></div>
+    <h2 style="max-width:22ch">Three tiers, per person, honestly inflated from your 2020 intel.</h2>
+    <p class="section-intro">Crew of six. Currency is easy: the <strong>EC$ is pegged at 2.70 to US$1</strong> and hasn't moved since 1976 — US dollars are accepted almost everywhere. The big swing is provisioning (Caribbean food is up ~35–45% since 2020) and the charter tier.</p>
+
+    <div class="cols" style="margin-top:26px;grid-template-columns:1.15fr .85fr">
+      <div class="chart">
+        <div class="ct">All-in cost per person, by tier</div>
+        <div class="cs">Crew of 6 · ~9–10 days · charter + flights + on-water + hotels · USD estimated</div>
+        <svg viewBox="0 0 580 258" role="img" aria-label="Stacked bar chart of estimated all-in cost per person for lean, comfortable and send-it tiers.">
+          <!-- scale: $0->x130, $6000->x520 => 0.065px/$ -->
+          <g font-family="var(--mono)" font-size="10" fill="var(--ink-3)">
+            <line x1="130" y1="20" x2="130" y2="205" stroke="var(--surface-ring)"/>
+            <line x1="260" y1="20" x2="260" y2="205" stroke="var(--surface-ring)" stroke-dasharray="2 3"/><text x="260" y="222" text-anchor="middle">$2k</text>
+            <line x1="390" y1="20" x2="390" y2="205" stroke="var(--surface-ring)" stroke-dasharray="2 3"/><text x="390" y="222" text-anchor="middle">$4k</text>
+            <line x1="520" y1="20" x2="520" y2="205" stroke="var(--surface-ring)" stroke-dasharray="2 3"/><text x="520" y="222" text-anchor="middle">$6k</text>
+            <text x="130" y="222" text-anchor="middle">$0</text>
+          </g>
+          <g font-family="var(--mono)" font-size="10.5">
+            <!-- Lean -->
+            <text x="18" y="52" fill="var(--ink)" font-weight="600">Lean</text>
+            <rect x="130" y="40" width="76" height="22" fill="var(--s1)"/>
+            <rect x="208" y="40" width="46" height="22" fill="var(--s3)"/>
+            <rect x="256" y="40" width="31" height="22" fill="var(--s4)"/>
+            <rect x="289" y="40" width="10" height="22" fill="var(--s6)"/>
+            <text x="307" y="56" fill="var(--ink)" font-weight="600">≈ $2,500</text>
+            <!-- Comfortable -->
+            <text x="18" y="120" fill="var(--ink)" font-weight="600">Comfortable</text>
+            <rect x="130" y="108" width="141" height="22" fill="var(--s1)"/>
+            <rect x="273" y="108" width="59" height="22" fill="var(--s3)"/>
+            <rect x="334" y="108" width="49" height="22" fill="var(--s4)"/>
+            <rect x="385" y="108" width="17" height="22" fill="var(--s6)"/>
+            <text x="410" y="124" fill="var(--ink)" font-weight="600">≈ $4,100</text>
+            <!-- Send-it -->
+            <text x="18" y="188" fill="var(--ink)" font-weight="600">Send-it</text>
+            <rect x="130" y="176" width="184" height="22" fill="var(--s1)"/>
+            <rect x="316" y="176" width="85" height="22" fill="var(--s3)"/>
+            <rect x="403" y="176" width="70" height="22" fill="var(--s4)"/>
+            <rect x="475" y="176" width="28" height="22" fill="var(--s6)"/>
+            <text x="511" y="192" fill="var(--ink)" font-weight="600">≈ $5,650</text>
+          </g>
+        </svg>
+        <div class="clegend">
+          <div class="li"><span class="sw" style="background:var(--s1)"></span>Charter (÷6)</div>
+          <div class="li"><span class="sw" style="background:var(--s3)"></span>Flights</div>
+          <div class="li"><span class="sw" style="background:var(--s4)"></span>On-water</div>
+          <div class="li"><span class="sw" style="background:var(--s6)"></span>Hotels</div>
+        </div>
+      </div>
+
+      <div class="tablewrap">
+        <table style="min-width:0">
+          <caption>Group totals (6 pax). On-water = moorings, provisioning, fuel, customs, meals, BBQ, tips.</caption>
+          <thead><tr><th>Line</th><th class="tnum">Lean</th><th class="tnum">Comf.</th><th class="tnum">Send-it</th></tr></thead>
+          <tbody>
+            <tr><td>Charter + extras</td><td class="tnum">7.0k</td><td class="tnum">13.0k</td><td class="tnum">17.0k</td></tr>
+            <tr><td>Flights (×6)</td><td class="tnum">4.2k</td><td class="tnum">5.4k</td><td class="tnum">7.8k</td></tr>
+            <tr><td>On-water</td><td class="tnum">2.8k</td><td class="tnum">4.5k</td><td class="tnum">6.5k</td></tr>
+            <tr><td>Hotels (2 nts)</td><td class="tnum">0.9k</td><td class="tnum">1.6k</td><td class="tnum">2.6k</td></tr>
+            <tr class="total"><td>Trip total</td><td class="tnum">~15k</td><td class="tnum">~24.5k</td><td class="tnum">~34k</td></tr>
+            <tr class="total"><td>Per person</td><td class="tnum">~2.5k</td><td class="tnum">~4.1k</td><td class="tnum">~5.7k</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px">On-water line items — 2020 baseline vs 2026</h3>
+    <div class="tablewrap" style="margin-top:14px">
+      <table>
+        <caption>Per-night / per-event unless noted. EC$2.70 = US$1. <span class="verified">V</span> verified-current · <span class="est">E</span> estimated.</caption>
+        <thead><tr><th>Item</th><th>Your 2020</th><th>2026</th><th class="tnum">US$</th><th>Tag</th></tr></thead>
+        <tbody>
+          <tr><td>Bequia mooring</td><td>EC$60</td><td>EC$50–60</td><td class="tnum">~20</td><td><span class="verified">V</span></td></tr>
+          <tr><td>Tobago Cays mooring + park (6 pax)</td><td>EC$45 + EC$10pp</td><td>EC$60 + EC$15pp</td><td class="tnum">~56</td><td><span class="verified">V</span></td></tr>
+          <tr><td>Mustique mooring <span class="cap">(mandatory, limited)</span></td><td>EC$210</td><td>~US$200 / 3-day permit</td><td class="tnum">~67/nt</td><td><span class="est">E</span></td></tr>
+          <tr><td>Tyrrell Bay mooring</td><td>—</td><td>boat-boy ball</td><td class="tnum">~20</td><td><span class="verified">V</span></td></tr>
+          <tr><td>Salt Whistle / Chatham</td><td>—</td><td>anchor free</td><td class="tnum">0</td><td><span class="verified">V</span></td></tr>
+          <tr><td>Provisioning (6 pax, 9 days)</td><td>baseline</td><td>+35–45% inflation</td><td class="tnum">1,500–2,700</td><td><span class="est">E</span></td></tr>
+          <tr><td>Diesel <span class="cap">(fuel in Grenada — cheaper)</span></td><td>—</td><td>Gnd ~$4.30 · SVG ~$6.02/gal</td><td class="tnum">150–300</td><td><span class="verified">V</span></td></tr>
+          <tr><td>Romeo lobster beach BBQ (pp)</td><td>$30–40</td><td>$40–55</td><td class="tnum">40–55</td><td><span class="verified">V</span></td></tr>
+          <tr><td>Basil's Bar dinner for 6 <span class="cap">(send-it night)</span></td><td>—</td><td>~$75+ pp w/ drinks</td><td class="tnum">400–650</td><td><span class="est">E</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:.86rem;color:var(--ink-3);margin-top:14px"><strong>Provisioning strategy holds:</strong> your proven DIY approach still wins — bulk-shop at <strong>IGA / Food Fair, St George's</strong> (largest, cheapest), top up perishables at <strong>Doris Fresh Foods / Knights Trading, Bequia</strong>, and have water/beer delivered. On a true bareboat there's no crew to tip; budget <strong>$5–20</strong> for boat-boy help and <strong>$20–50</strong> for the base cleaner.</p>
+  </div>
+</section>
+
+<!-- ============ 7 · BOOKING TIMELINE ============ -->
+<section id="booking" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="sechead"><span class="num">07</span><span class="eyebrow">Booking Timeline</span></div>
+    <h2 style="max-width:22ch">Counting back from 15 April 2027.</h2>
+    <p class="section-intro">April is the tail of high season and the good 45-ft cats book early. It's already mid-2026 — the boat is the one thing to lock <strong>now</strong>.</p>
+
+    <div class="timeline" style="margin-top:28px">
+      <div class="tl-item key">
+        <div class="when">NOW · ~9 mo</div>
+        <div class="body">
+          <h4>Book the boat &amp; buy the insurance in the same transaction</h4>
+          <p>Reserve the <strong>Moorings 4500L one-way</strong> (or Sunsail 454L / Dream Bali 4.2). At deposit, buy the <strong>Cancel-For-Any-Reason rider</strong> and elect the 12-month refund credit / Flex plan — this is the 2020-proofing, and it only exists if bought up front. Register <strong>SailClear</strong> ($25/yr) any time.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="when">~7–8 mo</div>
+        <div class="body">
+          <h4>Book flights the moment April 2027 schedules load</h4>
+          <p>Open-jaw <strong>UVF in / GND out</strong> for the one-way. Lock the arrival buffer (Tue for SEA/PHX, Wed for DFW) and any overnight-at-hub. Position leg via <strong>Barbados (BGI)</strong> if needed. Reserve pre/post hotels — <strong>Rodney Bay</strong> (St Lucia) and <strong>Grand Anse / Port Louis</strong> (Grenada).</p>
+        </div>
+      </div>
+      <div class="tl-item key">
+        <div class="when">~3–4 mo</div>
+        <div class="body">
+          <h4>Reserve the Mustique mooring — it's limited</h4>
+          <p>Only ~30 balls, mandatory, April is peak. Contact the Harbour Master (<span class="mono">Slick Berris +1-784-488-8363</span>) to hold one. Line up the <strong>provisioning plan</strong> (charter base package or IGA delivery) and confirm the sleep-aboard night.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="when">~1 mo</div>
+        <div class="body">
+          <h4>Book Romeo &amp; pre-pay park fees</h4>
+          <p>Message <strong>Romeo's BBQ</strong> (<span class="mono">WhatsApp +1-784-532-9822</span>) to pencil the Tobago Cays lobster night. Pre-pay Tobago Cays fees online at <strong>tcmp.reefsupport.org</strong>. Re-confirm the unconfirmed venues (Lazy Turtle, Palm Beach, Happy Island, Salt Whistle spit).</p>
+        </div>
+      </div>
+      <div class="tl-item key">
+        <div class="when">Departure −2 wk → day</div>
+        <div class="body">
+          <h4>Final provisioning, forecast &amp; hazard check</h4>
+          <p>Finalize the grocery order. Pull marine forecasts (PassageWeather / Windy) for the <strong>Bequia Channel</strong> and <strong>Carriacou–Grenada</strong> legs. <strong>Re-check the UWI-SRC / NaDMA Kick 'em Jenny alert level</strong> and CSSN/Noonsite security bulletins. Weigh every duffel to ≤44&nbsp;lb. Arrive on-island 1–2 days early — non-negotiable.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer" style="margin-top:30px">
+      <strong>Confirm-before-you-commit shortlist:</strong> live April-2027 charter quote + deposit figures · Mustique mooring availability &amp; current price · Salt Whistle Bay spit condition · fuel at Petite Martinique (assume none) · Lazy Turtle / Slipway / Palm Beach / Happy Island operating status · SVG diesel price (2026 cap may lift) · Kick 'em Jenny alert level at departure · current security &amp; sargassum bulletins.
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p style="font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:4px">Grenadines Charter Dossier · April 2027</p>
+    <p class="foot-note">Prepared as a decision-support document. Prices tagged <span class="verified">VERIFIED</span> reflect published 2025–26 rates; <span class="est">EST</span> figures are planning estimates and must be re-confirmed at booking. The East Caribbean dollar (XCD) is pegged at <strong>EC$2.70 = US$1</strong>. Hurricane season runs Jun 1–Nov 30; April sits safely outside it.</p>
+    <div class="disclaimer">Do your own final verification before committing funds. Charter fleets, mooring fees, customs schedules and flight routings change; Beryl recovery is ongoing. This dossier flags what was current at research time (mid-2026) and what still needs a phone call. Sea conditions and volcanic-hazard status must be checked against live NaDMA / UWI-SRC and marine forecasts before departure.</p>
+    <details style="margin-top:22px">
+      <summary style="cursor:pointer;font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)">Key sources &amp; further reading</summary>
+      <div class="srcgrid" style="margin-top:14px">
+        <a href="https://sailclear.com/">SailClear — pre-arrival clearance portal</a>
+        <a href="https://www.tobagocays.org/regulations-fees/">Tobago Cays Marine Park — fees</a>
+        <a href="https://tcmp.reefsupport.org/">Tobago Cays — online fee payment</a>
+        <a href="https://www.noonsite.com/place/grenada/view/fees/">Noonsite — Grenada clearance fees</a>
+        <a href="https://www.noonsite.com/place/st-vincent-the-grenadines/view/fees/">Noonsite — SVG fees</a>
+        <a href="https://caribbeancompass.com/beryl-recovery-the-islands-are-green-again/">Caribbean Compass — Beryl recovery</a>
+        <a href="https://www.allatsea.net/hurricane-beryls-impact-on-tyrell-bay-marina-carriacou-destruction-resilience/">All At Sea — Tyrrell Bay Marina post-Beryl</a>
+        <a href="https://doyleguides.com/union-island/">Doyle Guides — Union Island</a>
+        <a href="https://yaleclimateconnections.org/2025/07/one-year-after-hurricane-beryl-the-union-island-community-is-trying-to-recover-what-was-lost/">Yale — Union Island one year on</a>
+        <a href="https://www.stvincenttimes.com/salt-whistle-bay-mayreau-st-vincent-restored/">St Vincent Times — Salt Whistle Bay restored</a>
+        <a href="https://uwiseismic.com/volcanoes/kick-em-jenny/">UWI-SRC — Kick 'em Jenny</a>
+        <a href="https://uwiseismic.com/volcanoes/kick-em-jenny/kick-em-jenny-yachting-information/">UWI-SRC — Kick 'em Jenny yachting guidance</a>
+        <a href="https://www.moorings.com/blog/st-lucia-to-grenada-one-way">The Moorings — St Lucia→Grenada one-way</a>
+        <a href="https://www.moorings.com/yachts/sail-fleet/catamarans/4500l-4-cabin">The Moorings — 4500L (Leopard 45)</a>
+        <a href="https://assets.moorings.com/uploads/2025/12/US-Yachts-Booking-Conditions-December-2025.pdf">Moorings — booking conditions (Dec 2025)</a>
+        <a href="https://www.sunsail.com/yacht-charter/caribbean/grenada">Sunsail — Grenada</a>
+        <a href="https://www.dreamyachtcharter.com/charter/bareboat-charters/grenada/">Dream Yacht — Grenada bareboat</a>
+        <a href="https://horizonyachtcharters.com/">Horizon Yacht Charters</a>
+        <a href="https://www.flightconnections.com/flights-to-grenada-gnd">FlightConnections — flights to Grenada</a>
+        <a href="https://www.flightconnections.com/flights-from-mia-to-gnd">FlightConnections — MIA–GND schedule</a>
+        <a href="https://flysvgair.com/policies/">SVG Air — baggage policies</a>
+        <a href="https://www.intercaribbean.com/destinations/st-vincent.html">interCaribbean — regional network</a>
+        <a href="https://www.moorings.com/blog/best-time-to-sail-the-caribbean">The Moorings — best time to sail</a>
+        <a href="https://www.climatestotravel.com/climate/saint-vincent-and-grenadines">Climates to Travel — SVG climate</a>
+        <a href="https://www.moongiant.com/moonphases/april/2027/">Moongiant — April 2027 moon phases</a>
+        <a href="https://thecssn.org/annual-reports/caribbean-safety-and-security-net-annual-report-2025-reported-yacht-crime/">CSSN — 2025 yacht-crime report</a>
+        <a href="https://doyleguides.com/tobago-cays/">Doyle Guides — Tobago Cays</a>
+        <a href="https://doyleguides.com/bequia/">Doyle Guides — Bequia</a>
+        <a href="https://mustique-island.com/dining/basils-bar">Mustique — Basil's Bar</a>
+        <a href="https://www.toursgrenada.com/grenada-underwater-sculpture-park">Molinere Underwater Sculpture Park</a>
+        <a href="https://www.eccb-centralbank.org/currency">ECCB — EC$ currency peg</a>
+        <a href="https://www.globalpetrolprices.com/Grenada/diesel_prices/">Global Petrol Prices — Grenada diesel</a>
+      </div>
+    </details>
+  </div>
+</footer>
+
+<script>
+/* theme toggle */
+(function(){
+  var root=document.documentElement,btn=document.getElementById('themebtn');
+  function cur(){return root.getAttribute('data-theme')|| (matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+  btn.addEventListener('click',function(){
+    var next=cur()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    btn.textContent=next==='dark'?'☾':'◐';
+  });
+})();
+/* scrollspy */
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.navlinks a'));
+  var map={};links.forEach(function(a){var id=a.getAttribute('href').slice(1);var el=document.getElementById(id);if(el)map[id]=a;});
+  var obs=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){l.style.color='';l.style.background='';});
+      var a=map[e.target.id];if(a){a.style.color='var(--ink)';a.style.background='var(--paper-2)';}}});
+  },{rootMargin:'-45% 0px -50% 0px'});
+  Object.keys(map).forEach(function(id){obs.observe(document.getElementById(id));});
+})();
+</script>
