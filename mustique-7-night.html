@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Mustique in 7 Nights — Grenada Round Trip</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Route briefing: 7-night Grenada round trip reaching Mustique — daily legs, distances, motoring time at 8 kts, and overnight anchorages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F3ECDD; --paper-2:#EDE4D1; --surface:#FBF7EE; --surface-ring:#DFD3B8;
+  --ink:#0E2A3A; --ink-2:#375162; --ink-3:#6B7F8B;
+  --teal:#0B6E72; --teal-bright:#0BA1A6; --coral:#E15A3A;
+  --sand:#CDB98F; --gold:#B07A12; --sea:#D9E7E4; --sea-line:#B9D2CE;
+  --good:#3F7A4E; --warn:#B07A12; --bad:#C0402A;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --sans:"Archivo",system-ui,sans-serif;
+  --serif:"Fraunces",Georgia,serif;
+  --radius:14px; --radius-sm:9px;
+  --shadow:0 1px 2px rgba(14,42,58,.06),0 8px 30px -12px rgba(14,42,58,.18);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#081824; --paper-2:#0B2130; --surface:#0E2836; --surface-ring:#1C3E4E;
+    --ink:#EAF1F0; --ink-2:#A9C1C6; --ink-3:#7C979E;
+    --teal:#3FBEC2; --teal-bright:#17BFC4; --coral:#F0714E;
+    --sand:#C9B489; --gold:#D6A43A; --sea:#0C2836; --sea-line:#163847;
+    --good:#5FBE78; --warn:#D6A43A; --bad:#F0714E;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px -14px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#081824; --paper-2:#0B2130; --surface:#0E2836; --surface-ring:#1C3E4E;
+  --ink:#EAF1F0; --ink-2:#A9C1C6; --ink-3:#7C979E;
+  --teal:#3FBEC2; --teal-bright:#17BFC4; --coral:#F0714E;
+  --sand:#C9B489; --gold:#D6A43A; --sea:#0C2836; --sea-line:#163847;
+  --good:#5FBE78; --warn:#D6A43A; --bad:#F0714E;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 10px 34px -14px rgba(0,0,0,.6);
+}
+:root[data-theme="light"]{
+  --paper:#F3ECDD; --paper-2:#EDE4D1; --surface:#FBF7EE; --surface-ring:#DFD3B8;
+  --ink:#0E2A3A; --ink-2:#375162; --ink-3:#6B7F8B;
+  --teal:#0B6E72; --teal-bright:#0BA1A6; --coral:#E15A3A;
+  --sand:#CDB98F; --gold:#B07A12; --sea:#D9E7E4; --sea-line:#B9D2CE;
+  --good:#3F7A4E; --warn:#B07A12; --bad:#C0402A;
+  --shadow:0 1px 2px rgba(14,42,58,.06),0 8px 30px -12px rgba(14,42,58,.18);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);
+  font-size:16.5px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.08;text-wrap:balance;margin:0}
+p{margin:0 0 1em}
+.eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--teal)}
+.mono{font-family:var(--mono)}
+
+header{padding:clamp(40px,6vw,70px) 0 10px;display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+header h1{font-size:clamp(2.1rem,5.5vw,3.6rem);letter-spacing:-.02em;margin-top:10px}
+header h1 em{font-style:italic;color:var(--teal)}
+.lead{font-size:1.1rem;color:var(--ink-2);max-width:62ch;margin-top:16px}
+.themebtn{flex:none;border:1px solid var(--surface-ring);background:var(--surface);color:var(--ink-2);
+  width:36px;height:36px;border-radius:9px;cursor:pointer;font-size:.95rem}
+.themebtn:hover{color:var(--ink);border-color:var(--teal)}
+
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:26px 0 8px}
+.stat{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius-sm);padding:14px 16px}
+.stat .n{font-family:var(--serif);font-size:1.8rem;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.stat .n small{font-size:.85rem;color:var(--ink-3);font-family:var(--mono)}
+.stat .l{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);margin-top:7px}
+
+.panel{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;margin:26px 0}
+.panel .cap{padding:16px 22px 0;font-family:var(--serif);font-weight:600;font-size:1.15rem}
+.panel .sub{padding:2px 22px 14px;font-family:var(--mono);font-size:.7rem;color:var(--ink-3);letter-spacing:.04em}
+
+.mapbox{background:var(--sea);border-top:1px solid var(--surface-ring)}
+.mapbox svg{display:block;width:100%;height:auto}
+.maplegend{display:flex;flex-wrap:wrap;gap:12px 22px;padding:14px 22px;border-top:1px solid var(--surface-ring)}
+.maplegend .item{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.7rem;color:var(--ink-2)}
+.sw-n{width:22px;border-top:2.5px dashed var(--coral)}
+.sw-s{width:22px;border-top:2.5px dashed var(--teal-bright)}
+.sw-day{width:15px;height:15px;border-radius:50%;background:var(--ink);color:#fff;font-size:.56rem;display:grid;place-items:center;font-weight:600}
+.sw-hz{width:11px;height:11px;border-radius:50%;background:var(--coral)}
+
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.9rem;min-width:640px}
+thead th{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);
+  text-align:left;padding:12px 16px;border-bottom:1.5px solid var(--surface-ring);background:var(--paper-2);white-space:nowrap}
+tbody td{padding:12px 16px;border-bottom:1px solid color-mix(in srgb,var(--surface-ring) 60%,transparent);vertical-align:top}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:color-mix(in srgb,var(--teal) 5%,transparent)}
+.tnum{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+th.tnum{text-align:right}
+tr.total td{font-weight:600;border-top:1.5px solid var(--surface-ring);background:var(--paper-2)}
+.daynum{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);
+  font-family:var(--mono);font-size:.74rem;font-weight:600}
+:root[data-theme="dark"] .daynum{background:var(--teal-bright);color:#08222b}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .daynum{background:var(--teal-bright);color:#08222b}}
+.legcap{font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.clr{color:var(--coral);font-weight:600}
+
+.pill{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.64rem;font-weight:500;
+  letter-spacing:.05em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid var(--surface-ring);
+  color:var(--ink-2);background:var(--paper-2);white-space:nowrap}
+.pill.ok{color:var(--good);border-color:color-mix(in srgb,var(--good) 40%,transparent);background:color-mix(in srgb,var(--good) 10%,transparent)}
+.pill.warn{color:var(--warn);border-color:color-mix(in srgb,var(--warn) 40%,transparent);background:color-mix(in srgb,var(--warn) 12%,transparent)}
+
+h2.sec{font-size:clamp(1.4rem,3vw,1.9rem);margin:40px 0 6px}
+.secintro{color:var(--ink-2);max-width:68ch;margin-bottom:18px}
+.anchgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.anch{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow)}
+.anch .nights{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);font-weight:600}
+.anch h3{font-size:1.12rem;margin:6px 0 8px}
+.anch p{font-size:.88rem;color:var(--ink-2);margin:0 0 10px}
+.anch .meta{display:flex;flex-wrap:wrap;gap:6px}
+
+.callout{border-radius:var(--radius);padding:16px 20px 16px 22px;position:relative;border:1px solid var(--surface-ring);
+  background:var(--surface);margin:22px 0}
+.callout::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;border-radius:4px 0 0 4px;background:var(--teal)}
+.callout.hz::before{background:var(--coral)}
+.callout.hz{background:color-mix(in srgb,var(--coral) 7%,var(--surface))}
+.callout .lab{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin-bottom:5px}
+.callout.hz .lab{color:var(--coral)}
+.callout p:last-child{margin-bottom:0}
+
+footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ring);color:var(--ink-3);font-size:.8rem;font-family:var(--mono)}
+
+@media print{
+  :root,:root[data-theme="dark"],:root[data-theme="light"]{
+    --paper:#fff; --paper-2:#F5F0E4; --surface:#fff; --surface-ring:#C9BC9E;
+    --ink:#0E2A3A; --ink-2:#375162; --ink-3:#5D717C;
+    --teal:#0B6E72; --teal-bright:#0BA1A6; --coral:#C64A2C;
+    --sand:#D9CBA8; --gold:#9A6A10; --sea:#EAF1EE; --sea-line:#C4D8D3;
+    --good:#3F7A4E; --warn:#8A6410; --bad:#B23A22; --shadow:none;
+  }
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  body{font-size:10.5pt}
+  .themebtn{display:none}
+  .panel,.anch,.callout,tr{break-inside:avoid}
+  h2.sec{break-after:avoid}
+}
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div>
+    <span class="eyebrow">Route Briefing · Supplement to the April 2027 Dossier</span>
+    <h1>Mustique in 7 nights,<br>out of <em>Grenada.</em></h1>
+    <p class="lead">Yes, it fits — as a ~150&nbsp;nm loop with two honest ~30&nbsp;nm days at each end and short Grenadines hops in the middle. All times below are <strong>motoring at 8&nbsp;kts</strong>; under sail in April trades most legs run at similar or better speed on a reach.</p>
+  </div>
+  <button class="themebtn" id="themebtn" aria-label="Toggle light/dark theme">◐</button>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat"><div class="n">~151<small> nm</small></div><div class="l">Total loop</div></div>
+    <div class="stat"><div class="n">~19<small> h</small></div><div class="l">Engine hours @ 8 kts</div></div>
+    <div class="stat"><div class="n">7</div><div class="l">Nights · 6 anchorages</div></div>
+    <div class="stat"><div class="n">4<small>×</small></div><div class="l">Clearance stops (2 out · 2 in)</div></div>
+    <div class="stat"><div class="n">33<small> nm</small></div><div class="l">Longest day (Day 1)</div></div>
+  </div>
+
+  <!-- ROUTE MAP -->
+  <div class="panel">
+    <div class="cap">The loop</div>
+    <div class="sub">NORTHBOUND IN CORAL · SOUTHBOUND IN TEAL · NUMBERED DOTS = OVERNIGHTS · SCHEMATIC, NOT TO SCALE</div>
+    <div class="mapbox">
+      <svg viewBox="0 0 760 640" role="img" aria-label="Schematic chart of the 7-night loop from Grenada to Mustique and back, with numbered overnight stops.">
+        <defs>
+          <pattern id="grat" width="80" height="80" patternUnits="userSpaceOnUse">
+            <path d="M80 0V80M0 80H80" fill="none" stroke="var(--sea-line)" stroke-width="1"/>
+          </pattern>
+          <radialGradient id="hazg" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="var(--coral)" stop-opacity=".38"/>
+            <stop offset="70%" stop-color="var(--coral)" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="var(--coral)" stop-opacity="0"/>
+          </radialGradient>
+          <marker id="arrN" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0L8 4L0 8Z" fill="var(--coral)"/>
+          </marker>
+          <marker id="arrS" viewBox="0 0 8 8" refX="6" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+            <path d="M0 0L8 4L0 8Z" fill="var(--teal-bright)"/>
+          </marker>
+        </defs>
+        <rect width="760" height="640" fill="var(--sea)"/>
+        <rect width="760" height="640" fill="url(#grat)"/>
+        <g fill="var(--sea-line)" font-family="var(--mono)" font-size="11" opacity=".8">
+          <text x="80" y="300">196</text><text x="520" y="560">228</text>
+          <text x="640" y="420">184</text><text x="330" y="180">152</text>
+          <text x="120" y="480">210</text><text x="560" y="120">176</text>
+        </g>
+
+        <!-- ISLANDS -->
+        <g stroke="var(--gold)" stroke-width="1.1" stroke-opacity=".55">
+          <!-- Grenada -->
+          <path fill="var(--sand)" d="M136 528 q40-26 86-16 q46 10 50 46 q6 46-24 76 q-28 28-70 22 q-46-4-60-46 q-16-48 18-82Z"/>
+          <!-- Carriacou -->
+          <path fill="var(--sand)" d="M296 388 q26-12 40 6 q12 18 2 40 q-10 20-32 20 q-24 0-30-20 q-8-32 20-46Z"/>
+          <!-- Petite Martinique -->
+          <circle fill="var(--sand)" cx="372" cy="384" r="9"/>
+          <!-- Union -->
+          <path fill="var(--sand)" d="M394 332 q20-10 34 2 q12 12 4 28 q-8 16-28 14 q-18-2-22-18 q-4-18 12-26Z"/>
+          <!-- Mayreau -->
+          <path fill="var(--sand)" d="M448 314 q14-6 20 6 q4 12-4 20 q-12 10-24 0 q-8-12 8-26Z"/>
+          <!-- Tobago Cays -->
+          <g fill="var(--sand)"><circle cx="492" cy="300" r="5"/><circle cx="504" cy="308" r="4"/><circle cx="512" cy="298" r="3.6"/><circle cx="498" cy="290" r="3"/></g>
+          <!-- Canouan -->
+          <path fill="var(--sand)" d="M528 246 q18-10 32 2 q12 12 4 30 q-8 18-30 16 q-18-2-22-20 q-4-20 16-28Z"/>
+          <!-- Mustique -->
+          <path fill="var(--sand)" d="M604 156 q18-8 30 6 q10 14 0 30 q-12 16-30 12 q-16-4-18-22 q-2-18 18-26Z"/>
+          <!-- Bequia -->
+          <path fill="var(--sand)" d="M512 92 q34-12 52 8 q14 18 2 40 q-16 24-48 20 q-28-4-34-28 q-6-28 28-40Z"/>
+        </g>
+
+        <!-- KICK 'EM JENNY -->
+        <circle cx="216" cy="466" r="40" fill="url(#hazg)"/>
+        <circle cx="216" cy="466" r="17" fill="none" stroke="var(--coral)" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <text x="216" y="471" text-anchor="middle" font-family="var(--mono)" font-size="14" fill="var(--coral)" font-weight="600">⚠</text>
+        <text x="262" y="470" font-family="var(--mono)" font-size="10" fill="var(--coral)">KICK 'EM JENNY</text>
+        <text x="262" y="483" font-family="var(--mono)" font-size="9" fill="var(--coral)">KEEP WEST</text>
+
+        <!-- NORTHBOUND (coral): Port Louis -> lee coast -> Sauteurs -> Tyrrell -> Clifton -> Cays -> Mustique -> Bequia -->
+        <g fill="none" stroke="var(--coral)" stroke-width="2.4" stroke-dasharray="3 7" stroke-linecap="round">
+          <path d="M148 566 Q116 514 134 468 Q148 432 168 412" marker-end="url(#arrN)"/>
+          <path d="M168 412 Q222 378 296 400" marker-end="url(#arrN)"/>
+          <path d="M310 396 L398 348" marker-end="url(#arrN)"/>
+          <path d="M410 340 Q450 318 490 304" marker-end="url(#arrN)"/>
+          <path d="M506 292 Q560 240 610 184" marker-end="url(#arrN)"/>
+          <path d="M608 168 Q580 130 548 116" marker-end="url(#arrN)"/>
+        </g>
+        <!-- SOUTHBOUND (teal, offset west): Bequia -> Cays -> Clifton -> Tyrrell -> Dragon Bay -> Port Louis -->
+        <g fill="none" stroke="var(--teal-bright)" stroke-width="2.4" stroke-dasharray="3 7" stroke-linecap="round">
+          <path d="M528 118 Q490 190 502 288" marker-end="url(#arrS)"/>
+          <path d="M494 310 Q446 330 412 342" marker-end="url(#arrS)"/>
+          <path d="M396 352 L312 402" marker-end="url(#arrS)"/>
+          <path d="M292 410 Q216 428 158 480 Q136 502 138 546" marker-end="url(#arrS)"/>
+        </g>
+
+        <!-- overnight nodes with day numbers -->
+        <g font-family="var(--mono)" font-size="10.5" font-weight="600">
+          <!-- base -->
+          <rect x="142" y="560" width="12" height="12" rx="2" transform="rotate(45 148 566)" fill="var(--teal)"/>
+          <text x="148" y="596" text-anchor="middle" fill="var(--ink)">PORT LOUIS · START/FINISH</text>
+          <!-- D1 + D6 Tyrrell -->
+          <circle cx="303" cy="402" r="11" fill="var(--ink)"/><text x="303" y="406" text-anchor="middle" fill="var(--paper)">1·6</text>
+          <text x="303" y="432" text-anchor="middle" fill="var(--ink)">TYRRELL BAY</text>
+          <!-- Clifton waypoint -->
+          <circle cx="404" cy="345" r="5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.4"/>
+          <text x="426" y="366" text-anchor="middle" fill="#12303f">CLIFTON</text>
+          <!-- D2 + D5 Cays -->
+          <circle cx="500" cy="300" r="11" fill="var(--ink)"/><text x="500" y="304" text-anchor="middle" fill="var(--paper)">2·5</text>
+          <text x="512" y="328" text-anchor="middle" fill="var(--ink)">TOBAGO CAYS</text>
+          <!-- D3 Mustique -->
+          <circle cx="616" cy="176" r="11" fill="var(--coral)"/><text x="616" y="180" text-anchor="middle" fill="#fff">3</text>
+          <text x="648" y="204" text-anchor="middle" fill="var(--ink)">MUSTIQUE</text>
+          <!-- D4 Bequia -->
+          <circle cx="538" cy="116" r="11" fill="var(--ink)"/><text x="538" y="120" text-anchor="middle" fill="var(--paper)">4</text>
+          <text x="474" y="106" text-anchor="middle" fill="var(--ink)">BEQUIA</text>
+          <!-- D7 Dragon Bay -->
+          <circle cx="140" cy="530" r="11" fill="var(--ink)"/><text x="140" y="534" text-anchor="middle" fill="var(--paper)">7</text>
+          <text x="122" y="534" text-anchor="end" fill="var(--ink)">DRAGON BAY</text>
+        </g>
+
+        <!-- compass -->
+        <g transform="translate(692 84)" opacity=".9">
+          <circle r="28" fill="none" stroke="var(--ink-3)" stroke-width="1"/>
+          <path d="M0 -28 L6 0 L0 28 L-6 0Z" fill="var(--coral)"/>
+          <text x="0" y="-34" text-anchor="middle" font-family="var(--mono)" font-size="12" fill="var(--ink)" font-weight="600">N</text>
+        </g>
+      </svg>
+    </div>
+    <div class="maplegend">
+      <div class="item"><span class="sw-n"></span>Northbound (Days 1–4)</div>
+      <div class="item"><span class="sw-s"></span>Southbound (Days 5–7)</div>
+      <div class="item"><span class="sw-day">n</span>Overnight, day number</div>
+      <div class="item"><span class="sw-hz"></span>Kick 'em Jenny 1.5 km exclusion</div>
+    </div>
+  </div>
+
+  <!-- DAILY LEGS -->
+  <h2 class="sec">Day by day</h2>
+  <p class="secintro">Assumes boarding and provisioning the afternoon before Day&nbsp;1 (sleep aboard), returning the boat the morning after Night&nbsp;7. Times are engine-on passage time at 8&nbsp;kts — add ~15–20% for dinghy drops, mooring pickups and reef pilotage.</p>
+  <div class="panel">
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Day</th><th>Leg</th><th class="tnum">NM</th><th class="tnum">@ 8 kts</th><th>Overnight</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="daynum">1</span></td>
+            <td><strong>Port Louis → Tyrrell Bay, Carriacou</strong><br><span class="legcap">lee coast north to Sauteurs, then the 15 nm crossing</span></td>
+            <td class="tnum">33</td><td class="tnum">4 h 10</td>
+            <td>Tyrrell Bay</td>
+            <td>Depart by 08:00. Stay <strong>west of Kick 'em Jenny</strong>. <span class="clr">Clear out of Grenada</span> at the Tyrrell Bay marina office on arrival.</td>
+          </tr>
+          <tr>
+            <td><span class="daynum">2</span></td>
+            <td><strong>Tyrrell Bay → Clifton → Tobago Cays</strong><br><span class="legcap">border day — short hops</span></td>
+            <td class="tnum">16</td><td class="tnum">2 h 00</td>
+            <td>Tobago Cays</td>
+            <td><span class="clr">Clear into SVG</span> at Clifton (temp office behind Bougainvilla Bar), lunch at anchor off Union, then into the Cays mid-afternoon for a mooring behind Horseshoe Reef.</td>
+          </tr>
+          <tr>
+            <td><span class="daynum">3</span></td>
+            <td><strong>Tobago Cays → Britannia Bay, Mustique</strong><br><span class="legcap">the reach north past Canouan</span></td>
+            <td class="tnum">18</td><td class="tnum">2 h 15</td>
+            <td>Mustique</td>
+            <td>Morning turtle snorkel at Baradel first, sail by 11:00. Pick up the <strong>pre-booked mandatory mooring</strong>; Basil's Bar for sunset, Macaroni Beach by mule.</td>
+          </tr>
+          <tr>
+            <td><span class="daynum">4</span></td>
+            <td><strong>Mustique → Admiralty Bay, Bequia</strong><br><span class="legcap">shortest day — arrive by lunch</span></td>
+            <td class="tnum">12</td><td class="tnum">1 h 30</td>
+            <td>Bequia</td>
+            <td>Full afternoon ashore: Princess Margaret Beach, the boatbuilders, Mac's or the Frangipani for dinner. Top up perishables at Doris Fresh Foods.</td>
+          </tr>
+          <tr>
+            <td><span class="daynum">5</span></td>
+            <td><strong>Bequia → Tobago Cays</strong><br><span class="legcap">the long reach back south</span></td>
+            <td class="tnum">22</td><td class="tnum">2 h 45</td>
+            <td>Tobago Cays</td>
+            <td>Second Cays night — this is the lay-day substitute. Book <strong>Romeo's lobster BBQ</strong> on Petit Bateau for tonight (VHF "Romeo" / WhatsApp in the afternoon).</td>
+          </tr>
+          <tr>
+            <td><span class="daynum">6</span></td>
+            <td><strong>Tobago Cays → Clifton → Tyrrell Bay</strong><br><span class="legcap">border day in reverse</span></td>
+            <td class="tnum">16</td><td class="tnum">2 h 00</td>
+            <td>Tyrrell Bay <span class="legcap">or Sandy Island</span></td>
+            <td><span class="clr">Clear out of SVG</span> at Clifton early, then <span class="clr">clear back into Grenada</span> at Tyrrell Bay. If it's settled, swing past <strong>Sandy Island</strong> for a snorkel stop en route.</td>
+          </tr>
+          <tr>
+            <td><span class="daynum">7</span></td>
+            <td><strong>Tyrrell Bay → Dragon Bay, Grenada</strong><br><span class="legcap">the crossing home, then down the lee coast</span></td>
+            <td class="tnum">30</td><td class="tnum">3 h 45</td>
+            <td>Dragon Bay</td>
+            <td>Early start; west of Kick 'em Jenny again. Anchor off the <strong>Molinere sculpture park</strong> for a final-evening snorkel — 4 nm from the base for a relaxed hand-back next morning.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><strong>Morning after → Port Louis</strong><br><span class="legcap">return &amp; check-out</span></td>
+            <td class="tnum">4</td><td class="tnum">0 h 30</td>
+            <td>—</td>
+            <td>Dawn sculpture-park snorkel if you missed it, fuel dock, boat back by ~10:00.</td>
+          </tr>
+          <tr class="total">
+            <td></td><td>Total</td><td class="tnum">151</td><td class="tnum">≈ 18 h 55</td><td colspan="2">Avg ~19 nm/day · heaviest days bookend the trip</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="callout hz">
+    <div class="lab">▲ What makes this work — and what breaks it</div>
+    <p style="margin:0 0 8px">The loop only closes because <strong>Days 2–6 are short</strong>. The two 30+ nm crossings (Days 1 and 7) are the weather-critical legs: start them by 08:00 on the morning trades, and check the <strong>Kick 'em Jenny alert level</strong> (UWI-SRC/NaDMA) before each. If the forecast turns ugly for Day 7, sacrifice Dragon Bay and run Tyrrell → Port Louis direct (33 nm) — same hours, no final-night anchorage.</p>
+    <p style="margin:0;font-size:.9rem;color:var(--ink-3)"><strong>If Mustique's moorings are full</strong> (only ~30 balls, mandatory, book via the Harbour Master ahead): make Day 3 a Mustique <em>day stop</em> — lunch and Basil's — then overnight in Bequia, and take Day 4 as a full Bequia day. Miles barely change.</p>
+  </div>
+
+  <!-- OVERNIGHT SPOTS -->
+  <h2 class="sec">The overnight spots, ranked by job</h2>
+  <p class="secintro">Six anchorages over seven nights — two get repeat visits because they're the best-protected stops on the border days.</p>
+  <div class="anchgrid">
+    <div class="anch">
+      <div class="nights">Nights 1 &amp; 6</div>
+      <h3>Tyrrell Bay, Carriacou</h3>
+      <p>The workhorse: big, all-weather, mud/sand with excellent holding, customs at the marina, fuel and provisions ashore. Anchor ~10 ft on the south side, clear of the ship channel. Las Iguanas &amp; Lambi Queen for dinner.</p>
+      <div class="meta"><span class="pill ok">Shelter: excellent</span><span class="pill">Anchor free · ball ~US$20</span><span class="pill warn">Clearance stop</span></div>
+    </div>
+    <div class="anch">
+      <div class="nights">Nights 2 &amp; 5</div>
+      <h3>Tobago Cays (behind Horseshoe Reef)</h3>
+      <p>Open to the trades but flat water behind the reef — falling asleep to breeze with nothing between you and Africa. Mooring EC$60/24h + EC$15 pp park fee, paid online. Turtles at Baradel; Romeo's BBQ on Petit Bateau.</p>
+      <div class="meta"><span class="pill ok">Holding: moorings</span><span class="pill">EC$150/night for 6 · ~EC$180 for 8</span><span class="pill warn">Breezy — secure the bimini</span></div>
+    </div>
+    <div class="anch">
+      <div class="nights">Night 3 · the prize</div>
+      <h3>Britannia Bay, Mustique</h3>
+      <p>Mandatory mooring (~US$200/3-day permit), anchoring banned. Can roll in a northerly swell — take a ball toward the south end. Basil's Bar is the point of the whole detour; Wednesday is Jump-Up night if your dates line up.</p>
+      <div class="meta"><span class="pill warn">Book ahead — ~30 balls</span><span class="pill">US$200 / 3-day permit</span><span class="pill ok">Best bar of the trip</span></div>
+    </div>
+    <div class="anch">
+      <div class="nights">Night 4</div>
+      <h3>Admiralty Bay, Bequia</h3>
+      <p>The finest anchorage in the chain — huge, well-sheltered, soft mud holding, full town ashore. Ball ~EC$50–60 or anchor off Princess Margaret Beach. This is the reprovision-and-long-dinner night.</p>
+      <div class="meta"><span class="pill ok">Shelter: excellent</span><span class="pill">Ball EC$50–60 · anchor free</span><span class="pill ok">Best town ashore</span></div>
+    </div>
+    <div class="anch">
+      <div class="nights">Night 6 alternative</div>
+      <h3>Sandy Island, Carriacou</h3>
+      <p>A palm-fringed sandbar in the marine park, 1.5 nm from Tyrrell — take a park mooring for a swimsuit-only evening if the weather is settled. No services; clear in at Tyrrell first, then shift over.</p>
+      <div class="meta"><span class="pill warn">Settled weather only</span><span class="pill">Park mooring</span><span class="pill ok">Best sundowner</span></div>
+    </div>
+    <div class="anch">
+      <div class="nights">Night 7</div>
+      <h3>Dragon Bay, Grenada</h3>
+      <p>Quiet final night on Grenada's lee coast, directly over the Molinere Underwater Sculpture Park — snorkel the statues at golden hour with nobody around, then a 30-minute motor to the base at hand-back.</p>
+      <div class="meta"><span class="pill ok">Calm lee-coast water</span><span class="pill">Day moorings / anchor</span><span class="pill ok">Sculpture-park snorkel</span></div>
+    </div>
+  </div>
+
+  <div class="callout">
+    <div class="lab">◆ The honest trade vs the 7-day plan in the dossier</div>
+    <p style="margin:0">Compared with Option A (which cut Mustique), this loop buys Basil's Bar and a Bequia night by <strong>spending the lay day</strong> — no zero-mile day, and the Cays get two single nights instead of a full 48 hours. If your crew would rather float than move, Option A is the calmer week; if Mustique is the memory you're chasing, this is how it fits.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    Supplement to the Grenadines Charter Dossier (April 2027). Distances from the dossier's verified leg table; times are engine-on at 8 kts. Confirm Mustique mooring availability with the Harbour Master and the Kick 'em Jenny alert level before Days 1 and 7.
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('themebtn');
+  function cur(){return root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');}
+  btn.addEventListener('click',function(){
+    var next=cur()==='dark'?'light':'dark';
+    root.setAttribute('data-theme',next);
+    btn.textContent=next==='dark'?'☾':'◐';
+  });
+})();
+</script>
+</body>
+</html>
