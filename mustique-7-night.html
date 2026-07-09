@@ -148,18 +148,18 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
   <div>
     <span class="eyebrow">Route Briefing · Supplement to the April 2027 Dossier</span>
     <h1>Mustique in 7 nights,<br>out of <em>Grenada.</em></h1>
-    <p class="lead">Yes, it fits — as a ~150&nbsp;nm loop with two honest ~30&nbsp;nm days at each end and short Grenadines hops in the middle. All times below are <strong>motoring at 8&nbsp;kts</strong>; under sail in April trades most legs run at similar or better speed on a reach.</p>
+    <p class="lead">Yes, it still fits — counting the way charters actually run: <strong>afternoon check-in, Night&nbsp;1 at the marina</strong>, six nights out, boat back the final morning. That leaves a ~135&nbsp;nm loop, and the price of the marina night is <strong>Bequia</strong> (kept below as a variant). All times are <strong>motoring at 8&nbsp;kts</strong>; under sail in April trades most legs run at similar or better speed on a reach.</p>
   </div>
   <button class="themebtn" id="themebtn" aria-label="Toggle light/dark theme">◐</button>
 </header>
 
 <div class="wrap">
   <div class="stats">
-    <div class="stat"><div class="n">~151<small> nm</small></div><div class="l">Total loop</div></div>
-    <div class="stat"><div class="n">~19<small> h</small></div><div class="l">Engine hours @ 8 kts</div></div>
-    <div class="stat"><div class="n">7</div><div class="l">Nights · 6 anchorages</div></div>
+    <div class="stat"><div class="n">~135<small> nm</small></div><div class="l">Total loop</div></div>
+    <div class="stat"><div class="n">~17<small> h</small></div><div class="l">Engine hours @ 8 kts</div></div>
+    <div class="stat"><div class="n">1+6</div><div class="l">Marina night + nights out</div></div>
     <div class="stat"><div class="n">4<small>×</small></div><div class="l">Clearance stops (2 out · 2 in)</div></div>
-    <div class="stat"><div class="n">33<small> nm</small></div><div class="l">Longest day (Day 1)</div></div>
+    <div class="stat"><div class="n">33<small> nm</small></div><div class="l">Longest day (Day 2)</div></div>
   </div>
 
   <!-- ROUTE MAP -->
@@ -228,11 +228,10 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
           <path d="M310 396 L398 348" marker-end="url(#arrN)"/>
           <path d="M410 340 Q450 318 490 304" marker-end="url(#arrN)"/>
           <path d="M506 292 Q560 240 610 184" marker-end="url(#arrN)"/>
-          <path d="M608 168 Q580 130 548 116" marker-end="url(#arrN)"/>
         </g>
         <!-- SOUTHBOUND (teal, offset west): Bequia -> Cays -> Clifton -> Tyrrell -> Dragon Bay -> Port Louis -->
         <g fill="none" stroke="var(--teal-bright)" stroke-width="2.4" stroke-dasharray="3 7" stroke-linecap="round">
-          <path d="M528 118 Q490 190 502 288" marker-end="url(#arrS)"/>
+          <path d="M600 198 Q585 258 514 288" marker-end="url(#arrS)"/>
           <path d="M494 310 Q446 330 412 342" marker-end="url(#arrS)"/>
           <path d="M396 352 L312 402" marker-end="url(#arrS)"/>
           <path d="M292 410 Q216 428 158 480 Q136 502 138 546" marker-end="url(#arrS)"/>
@@ -242,22 +241,22 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
         <g font-family="var(--mono)" font-size="10.5" font-weight="600">
           <!-- base -->
           <rect x="142" y="560" width="12" height="12" rx="2" transform="rotate(45 148 566)" fill="var(--teal)"/>
-          <text x="148" y="596" text-anchor="middle" fill="var(--ink)">PORT LOUIS · START/FINISH</text>
+          <circle cx="176" cy="566" r="11" fill="var(--ink)"/><text x="176" y="570" text-anchor="middle" fill="var(--paper)">1</text>
+          <text x="148" y="596" text-anchor="middle" fill="var(--ink)">PORT LOUIS · NIGHT 1 + FINISH</text>
           <!-- D1 + D6 Tyrrell -->
-          <circle cx="303" cy="402" r="11" fill="var(--ink)"/><text x="303" y="406" text-anchor="middle" fill="var(--paper)">1·6</text>
+          <circle cx="303" cy="402" r="11" fill="var(--ink)"/><text x="303" y="406" text-anchor="middle" fill="var(--paper)">2·6</text>
           <text x="303" y="432" text-anchor="middle" fill="var(--ink)">TYRRELL BAY</text>
           <!-- Clifton waypoint -->
           <circle cx="404" cy="345" r="5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.4"/>
           <text x="426" y="366" text-anchor="middle" fill="#12303f">CLIFTON</text>
           <!-- D2 + D5 Cays -->
-          <circle cx="500" cy="300" r="11" fill="var(--ink)"/><text x="500" y="304" text-anchor="middle" fill="var(--paper)">2·5</text>
+          <circle cx="500" cy="300" r="11" fill="var(--ink)"/><text x="500" y="304" text-anchor="middle" fill="var(--paper)">3·5</text>
           <text x="512" y="328" text-anchor="middle" fill="var(--ink)">TOBAGO CAYS</text>
           <!-- D3 Mustique -->
-          <circle cx="616" cy="176" r="11" fill="var(--coral)"/><text x="616" y="180" text-anchor="middle" fill="#fff">3</text>
+          <circle cx="616" cy="176" r="11" fill="var(--coral)"/><text x="616" y="180" text-anchor="middle" fill="#fff">4</text>
           <text x="648" y="204" text-anchor="middle" fill="var(--ink)">MUSTIQUE</text>
           <!-- D4 Bequia -->
-          <circle cx="538" cy="116" r="11" fill="var(--ink)"/><text x="538" y="120" text-anchor="middle" fill="var(--paper)">4</text>
-          <text x="474" y="106" text-anchor="middle" fill="var(--ink)">BEQUIA</text>
+          <text x="512" y="76" text-anchor="middle" fill="var(--ink-3)">BEQUIA · NOT THIS TRIP</text>
           <!-- D7 Dragon Bay -->
           <circle cx="140" cy="530" r="11" fill="var(--ink)"/><text x="140" y="534" text-anchor="middle" fill="var(--paper)">7</text>
           <text x="122" y="534" text-anchor="end" fill="var(--ink)">DRAGON BAY</text>
@@ -272,7 +271,7 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
       </svg>
     </div>
     <div class="maplegend">
-      <div class="item"><span class="sw-n"></span>Northbound (Days 1–4)</div>
+      <div class="item"><span class="sw-n"></span>Northbound (Days 2–4)</div>
       <div class="item"><span class="sw-s"></span>Southbound (Days 5–7)</div>
       <div class="item"><span class="sw-day">n</span>Overnight, day number</div>
       <div class="item"><span class="sw-hz"></span>Kick 'em Jenny 1.5 km exclusion</div>
@@ -281,7 +280,7 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
 
   <!-- DAILY LEGS -->
   <h2 class="sec">Day by day</h2>
-  <p class="secintro">Assumes boarding and provisioning the afternoon before Day&nbsp;1 (sleep aboard), returning the boat the morning after Night&nbsp;7. Times are engine-on passage time at 8&nbsp;kts — add ~15–20% for dinghy drops, mooring pickups and reef pilotage.</p>
+  <p class="secintro">A true 7-night charter: afternoon check-in and boat briefing on Day&nbsp;1, <strong>Night&nbsp;1 alongside at Port Louis</strong>, six nights out, boat back by ~10:00 the morning after Night&nbsp;7. Times are engine-on passage time at 8&nbsp;kts — add ~15–20% for dinghy drops, mooring pickups and reef pilotage.</p>
   <div class="panel">
     <div class="tablewrap">
       <table>
@@ -289,38 +288,38 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
         <tbody>
           <tr>
             <td><span class="daynum">1</span></td>
-            <td><strong>Port Louis → Tyrrell Bay, Carriacou</strong><br><span class="legcap">lee coast north to Sauteurs, then the 15 nm crossing</span></td>
-            <td class="tnum">33</td><td class="tnum">4 h 10</td>
-            <td>Tyrrell Bay</td>
-            <td>Depart by 08:00. Stay <strong>west of Kick 'em Jenny</strong>. <span class="clr">Clear out of Grenada</span> at the Tyrrell Bay marina office on arrival.</td>
+            <td><strong>Check-in at Port Louis</strong><br><span class="legcap">boarding ~15:00 · briefing · provision</span></td>
+            <td class="tnum">0</td><td class="tnum">—</td>
+            <td>Port Louis Marina</td>
+            <td>Afternoon check-in and boat/chart briefing; groceries delivered or a taxi run to IGA/Food Fair. Dinner ashore in St George's. <strong>Night alongside — the clock starts here.</strong></td>
           </tr>
           <tr>
             <td><span class="daynum">2</span></td>
-            <td><strong>Tyrrell Bay → Clifton → Tobago Cays</strong><br><span class="legcap">border day — short hops</span></td>
-            <td class="tnum">16</td><td class="tnum">2 h 00</td>
-            <td>Tobago Cays</td>
-            <td><span class="clr">Clear into SVG</span> at Clifton (temp office behind Bougainvilla Bar), lunch at anchor off Union, then into the Cays mid-afternoon for a mooring behind Horseshoe Reef.</td>
+            <td><strong>Port Louis → Tyrrell Bay, Carriacou</strong><br><span class="legcap">lee coast north to Sauteurs, then the 15 nm crossing</span></td>
+            <td class="tnum">33</td><td class="tnum">4 h 10</td>
+            <td>Tyrrell Bay</td>
+            <td>Depart by 08:00 — the earlier the better after yesterday's briefing. Stay <strong>west of Kick 'em Jenny</strong>. <span class="clr">Clear out of Grenada</span> at the Tyrrell Bay marina office on arrival.</td>
           </tr>
           <tr>
             <td><span class="daynum">3</span></td>
-            <td><strong>Tobago Cays → Britannia Bay, Mustique</strong><br><span class="legcap">the reach north past Canouan</span></td>
-            <td class="tnum">18</td><td class="tnum">2 h 15</td>
-            <td>Mustique</td>
-            <td>Morning turtle snorkel at Baradel first, sail by 11:00. Pick up the <strong>pre-booked mandatory mooring</strong>; Basil's Bar for sunset, Macaroni Beach by mule.</td>
+            <td><strong>Tyrrell Bay → Clifton → Tobago Cays</strong><br><span class="legcap">border day — short hops</span></td>
+            <td class="tnum">16</td><td class="tnum">2 h 00</td>
+            <td>Tobago Cays</td>
+            <td><span class="clr">Clear into SVG</span> at Clifton (temp office behind Bougainvilla Bar), lunch at anchor off Union, then into the Cays mid-afternoon for a mooring behind Horseshoe Reef. Turtle snorkel at Baradel before sundown.</td>
           </tr>
           <tr>
             <td><span class="daynum">4</span></td>
-            <td><strong>Mustique → Admiralty Bay, Bequia</strong><br><span class="legcap">shortest day — arrive by lunch</span></td>
-            <td class="tnum">12</td><td class="tnum">1 h 30</td>
-            <td>Bequia</td>
-            <td>Full afternoon ashore: Princess Margaret Beach, the boatbuilders, Mac's or the Frangipani for dinner. Top up perishables at Doris Fresh Foods.</td>
+            <td><strong>Tobago Cays → Britannia Bay, Mustique</strong><br><span class="legcap">the reach north past Canouan</span></td>
+            <td class="tnum">18</td><td class="tnum">2 h 15</td>
+            <td>Mustique</td>
+            <td>One more Baradel swim at first light, sail by 10:30. Pick up the <strong>pre-booked mandatory mooring</strong>; Basil's Bar for sunset, Macaroni Beach by mule. The whole point of the trip.</td>
           </tr>
           <tr>
             <td><span class="daynum">5</span></td>
-            <td><strong>Bequia → Tobago Cays</strong><br><span class="legcap">the long reach back south</span></td>
-            <td class="tnum">22</td><td class="tnum">2 h 45</td>
+            <td><strong>Mustique → Tobago Cays</strong><br><span class="legcap">retrace the reach — downwind angle, fast</span></td>
+            <td class="tnum">18</td><td class="tnum">2 h 15</td>
             <td>Tobago Cays</td>
-            <td>Second Cays night — this is the lay-day substitute. Book <strong>Romeo's lobster BBQ</strong> on Petit Bateau for tonight (VHF "Romeo" / WhatsApp in the afternoon).</td>
+            <td>Lazy Mustique morning (swim, Firefly coffee), back in the Cays by mid-afternoon. Book <strong>Romeo's lobster BBQ</strong> on Petit Bateau for tonight (VHF "Romeo" / WhatsApp).</td>
           </tr>
           <tr>
             <td><span class="daynum">6</span></td>
@@ -344,7 +343,7 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
             <td>Dawn sculpture-park snorkel if you missed it, fuel dock, boat back by ~10:00.</td>
           </tr>
           <tr class="total">
-            <td></td><td>Total</td><td class="tnum">151</td><td class="tnum">≈ 18 h 55</td><td colspan="2">Avg ~19 nm/day · heaviest days bookend the trip</td>
+            <td></td><td>Total</td><td class="tnum">135</td><td class="tnum">≈ 16 h 55</td><td colspan="2">6 sailing days · avg ~22 nm each · heaviest days bookend the trip</td>
           </tr>
         </tbody>
       </table>
@@ -353,37 +352,37 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
 
   <div class="callout hz">
     <div class="lab">▲ What makes this work — and what breaks it</div>
-    <p style="margin:0 0 8px">The loop only closes because <strong>Days 2–6 are short</strong>. The two 30+ nm crossings (Days 1 and 7) are the weather-critical legs: start them by 08:00 on the morning trades, and check the <strong>Kick 'em Jenny alert level</strong> (UWI-SRC/NaDMA) before each. If the forecast turns ugly for Day 7, sacrifice Dragon Bay and run Tyrrell → Port Louis direct (33 nm) — same hours, no final-night anchorage.</p>
-    <p style="margin:0;font-size:.9rem;color:var(--ink-3)"><strong>If Mustique's moorings are full</strong> (only ~30 balls, mandatory, book via the Harbour Master ahead): make Day 3 a Mustique <em>day stop</em> — lunch and Basil's — then overnight in Bequia, and take Day 4 as a full Bequia day. Miles barely change.</p>
+    <p style="margin:0 0 8px">The loop only closes because <strong>Days 3–6 are short</strong>. The two 30+ nm crossings (Days 2 and 7) are the weather-critical legs: start them by 08:00 on the morning trades, and check the <strong>Kick 'em Jenny alert level</strong> (UWI-SRC/NaDMA) before each. If the forecast turns ugly for Day 7, sacrifice Dragon Bay and run Tyrrell → Port Louis direct (33 nm) — same hours, no final-night anchorage.</p>
+    <p style="margin:0;font-size:.9rem;color:var(--ink-3)"><strong>If Mustique's moorings are full</strong> (only ~30 balls, mandatory, book via the Harbour Master ahead): make Day 4 a Mustique <em>day stop</em> — lunch, Macaroni Beach and an early Basil's — then run the 12 nm back to <strong>Canouan (Charlestown/Glossy Bay)</strong> for the night and rejoin the plan at the Cays on Day 5. Miles barely change.</p>
   </div>
 
   <!-- OVERNIGHT SPOTS -->
   <h2 class="sec">The overnight spots, ranked by job</h2>
-  <p class="secintro">Six anchorages over seven nights — two get repeat visits because they're the best-protected stops on the border days.</p>
+  <p class="secintro">One marina night and five anchorages over the six nights out — Tyrrell Bay and the Cays repeat because they're the best-protected stops on the border days.</p>
   <div class="anchgrid">
     <div class="anch">
-      <div class="nights">Nights 1 &amp; 6</div>
+      <div class="nights">Nights 2 &amp; 6</div>
       <h3>Tyrrell Bay, Carriacou</h3>
       <p>The workhorse: big, all-weather, mud/sand with excellent holding, customs at the marina, fuel and provisions ashore. Anchor ~10 ft on the south side, clear of the ship channel. Las Iguanas &amp; Lambi Queen for dinner.</p>
       <div class="meta"><span class="pill ok">Shelter: excellent</span><span class="pill">Anchor free · ball ~US$20</span><span class="pill warn">Clearance stop</span></div>
     </div>
     <div class="anch">
-      <div class="nights">Nights 2 &amp; 5</div>
+      <div class="nights">Nights 3 &amp; 5</div>
       <h3>Tobago Cays (behind Horseshoe Reef)</h3>
       <p>Open to the trades but flat water behind the reef — falling asleep to breeze with nothing between you and Africa. Mooring EC$60/24h + EC$15 pp park fee, paid online. Turtles at Baradel; Romeo's BBQ on Petit Bateau.</p>
       <div class="meta"><span class="pill ok">Holding: moorings</span><span class="pill">EC$150/night for 6 · ~EC$180 for 8</span><span class="pill warn">Breezy — secure the bimini</span></div>
     </div>
     <div class="anch">
-      <div class="nights">Night 3 · the prize</div>
+      <div class="nights">Night 4 · the prize</div>
       <h3>Britannia Bay, Mustique</h3>
       <p>Mandatory mooring (~US$200/3-day permit), anchoring banned. Can roll in a northerly swell — take a ball toward the south end. Basil's Bar is the point of the whole detour; Wednesday is Jump-Up night if your dates line up.</p>
       <div class="meta"><span class="pill warn">Book ahead — ~30 balls</span><span class="pill">US$200 / 3-day permit</span><span class="pill ok">Best bar of the trip</span></div>
     </div>
     <div class="anch">
-      <div class="nights">Night 4</div>
-      <h3>Admiralty Bay, Bequia</h3>
-      <p>The finest anchorage in the chain — huge, well-sheltered, soft mud holding, full town ashore. Ball ~EC$50–60 or anchor off Princess Margaret Beach. This is the reprovision-and-long-dinner night.</p>
-      <div class="meta"><span class="pill ok">Shelter: excellent</span><span class="pill">Ball EC$50–60 · anchor free</span><span class="pill ok">Best town ashore</span></div>
+      <div class="nights">Night 1 · alongside</div>
+      <h3>Port Louis Marina, St George's</h3>
+      <p>The check-in night the charter clock actually charges you for. Use it well: boat and chart briefing, stow the IGA/Food Fair provisioning run, dinner in St George's, early lines-off. Power and water on the dock — charge everything.</p>
+      <div class="meta"><span class="pill ok">Full marina services</span><span class="pill">Included in charter</span><span class="pill warn">Depart 08:00 sharp Day 2</span></div>
     </div>
     <div class="anch">
       <div class="nights">Night 6 alternative</div>
@@ -400,14 +399,15 @@ footer{padding:36px 0 60px;margin-top:44px;border-top:1px solid var(--surface-ri
   </div>
 
   <div class="callout">
-    <div class="lab">◆ The honest trade vs the 7-day plan in the dossier</div>
-    <p style="margin:0">Compared with Option A (which cut Mustique), this loop buys Basil's Bar and a Bequia night by <strong>spending the lay day</strong> — no zero-mile day, and the Cays get two single nights instead of a full 48 hours. If your crew would rather float than move, Option A is the calmer week; if Mustique is the memory you're chasing, this is how it fits.</p>
+    <div class="lab">◆ The honest trades — and how to buy Bequia back</div>
+    <p style="margin:0 0 8px">The marina night costs you a cruising stop, and on this route the casualty is <strong>Bequia</strong>. What you keep: Mustique, two Cays nights (Baradel turtles one night, Romeo's the other), Sandy Island, and the sculpture-park finish. There's no zero-mile lay day — every day but the first moves the boat.</p>
+    <p style="margin:0;font-size:.9rem;color:var(--ink-3)"><strong>Want Bequia anyway?</strong> Swap the second Cays night for it: Day&nbsp;5 Mustique → Admiralty Bay (12&nbsp;nm), then accept a heavy Day&nbsp;6 — Bequia → Clifton <span style="color:var(--coral)">(clear out)</span> → Tyrrell Bay <span style="color:var(--coral)">(clear in)</span>, ~35&nbsp;nm plus two customs stops, ~4&nbsp;h&nbsp;20 engine time before paperwork. Doable with a 07:00 start, but it turns the gentlest stretch of the week into its longest day. The cleaner fix: <strong>book 8 nights</strong> — that's the version in the first draft of this briefing, with Bequia and Dragon Bay both in.</p>
   </div>
 </div>
 
 <footer>
   <div class="wrap">
-    Supplement to the Grenadines Charter Dossier (April 2027). Distances from the dossier's verified leg table; times are engine-on at 8 kts. Confirm Mustique mooring availability with the Harbour Master and the Kick 'em Jenny alert level before Days 1 and 7.
+    Supplement to the Grenadines Charter Dossier (April 2027). A 7-night charter counted honestly: afternoon check-in, Night 1 alongside at Port Louis, six nights out. Distances from the dossier's verified leg table; times are engine-on at 8 kts. Confirm Mustique mooring availability with the Harbour Master and the Kick 'em Jenny alert level before Days 2 and 7.
   </div>
 </footer>
 
