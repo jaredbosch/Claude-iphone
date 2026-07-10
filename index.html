@@ -1,6 +1,6 @@
-<title>Grenadines Charter Dossier — April 2027</title>
+<title>Grenadines Charter Guidebook — 15–23 April 2027</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Decision-ready bareboat charter planning dossier: Grenada to St Lucia, April 2027. Post-Beryl reality check, charter matrix, four itineraries, conditions, and budget.">
+<meta name="description" content="Professional guidebook for the booked charter: Sunsail 545L out of Port Louis, Grenada, 15–23 April 2027. Day-by-day voyage plan, dining guide, conditions, and countdown.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -291,6 +291,52 @@ tr.total td{font-weight:600;border-top:1.5px solid var(--surface-ring);backgroun
 .boat .pricebar .p small{font-family:var(--mono);font-size:.66rem;color:var(--ink-3);font-weight:500}
 .boat .pricebar .bases{font-family:var(--mono);font-size:.68rem;color:var(--ink-3);text-align:right}
 
+/* ---------- voyage day plates ---------- */
+.voy{display:flex;flex-direction:column;gap:18px;margin-top:28px}
+.dayplate{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden;display:grid;grid-template-columns:132px 1fr 300px}
+.dayplate.key{border-color:var(--teal)}
+.dp-date{background:var(--paper-2);border-right:1px solid var(--surface-ring);padding:20px 16px;
+  display:flex;flex-direction:column;gap:2px;align-items:flex-start}
+.dp-date .dow{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--coral);font-weight:600}
+.dp-date .dnum{font-family:var(--serif);font-size:2.5rem;font-weight:600;line-height:1;color:var(--ink)}
+.dp-date .mon{font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.dp-date .moon{margin-top:auto;font-size:1.05rem;line-height:1}
+.dp-date .nite{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);margin-top:4px}
+.dp-main{padding:18px 22px 20px;min-width:0}
+.dp-main h3{font-size:1.22rem;margin-bottom:2px}
+.dp-route{font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--teal);margin-bottom:10px}
+.dp-route b{color:var(--coral);font-weight:600}
+.dp-main p{font-size:.92rem;color:var(--ink-2);margin:0 0 10px}
+.dp-picks{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px;margin-top:12px;border-top:1px dashed var(--surface-ring);padding-top:12px}
+.dp-picks .pick{font-size:.84rem;color:var(--ink-2)}
+.dp-picks .pick .pk{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:2px}
+.dp-map{background:var(--sea);border-left:1px solid var(--surface-ring);position:relative;min-height:190px}
+.dp-map svg{display:block;width:100%;height:100%;position:absolute;inset:0}
+@media(max-width:940px){
+  .dayplate{grid-template-columns:96px 1fr}
+  .dp-map{display:none}
+  .dp-date .dnum{font-size:1.9rem}
+}
+@media(max-width:560px){.dp-picks{grid-template-columns:1fr}}
+
+/* ---------- dining directory ---------- */
+.dinegrid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:880px){.dinegrid{grid-template-columns:1fr}}
+.dinecard{background:var(--surface);border:1px solid var(--surface-ring);border-radius:var(--radius);
+  box-shadow:var(--shadow);overflow:hidden}
+.dinecard .dh{padding:14px 20px;background:var(--paper-2);border-bottom:1px solid var(--surface-ring);
+  display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.dinecard .dh h3{font-size:1.12rem}
+.dinecard .dh .where{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.venue{padding:12px 20px;border-bottom:1px solid color-mix(in srgb,var(--surface-ring) 55%,transparent)}
+.venue:last-child{border-bottom:0}
+.venue .vh{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.venue .vh .nm{font-weight:600;color:var(--ink);font-size:.95rem}
+.venue .vh .price{font-family:var(--mono);font-size:.68rem;color:var(--gold);letter-spacing:.06em}
+.venue p{font-size:.84rem;color:var(--ink-2);margin:3px 0 0}
+.venue .book{font-family:var(--mono);font-size:.68rem;color:var(--teal);margin-top:3px;display:block}
+
 /* footer */
 footer{padding:50px 0 70px;border-top:1px solid var(--surface-ring);margin-top:40px;color:var(--ink-3);font-size:.85rem}
 footer a{color:var(--ink-2)}
@@ -343,7 +389,7 @@ footer a{color:var(--ink-2)}
 
   /* never split a self-contained block across a page */
   .card,.callout,.chart,.tablewrap,.optcard,.tl-item,.reco,.stat,.mapfeature,
-  .metastrip,.boat,.nonneg .req,figure,tr,thead{break-inside:avoid}
+  .metastrip,.boat,.nonneg .req,.dayplate,.dinecard,.venue,figure,tr,thead{break-inside:avoid}
   .boatgrid{grid-template-columns:1fr 1fr !important}
   h2,h3,h4{break-after:avoid}
   .sechead{break-after:avoid}
@@ -362,17 +408,17 @@ footer a{color:var(--ink-2)}
 <!-- ================= NAV ================= -->
 <nav class="topnav">
   <div class="row">
-    <div class="brand"><span class="dot"></span>GRENADINES&nbsp;·&nbsp;APR&nbsp;2027</div>
+    <div class="brand"><span class="dot"></span>GRENADINES&nbsp;·&nbsp;APR&nbsp;15–23&nbsp;2027</div>
     <div class="navlinks">
-      <a href="#summary">Summary</a>
+      <a href="#summary">The Plan</a>
       <a href="#reality">Reality Check</a>
       <a href="#flights">Flights</a>
-      <a href="#fleet">Charter Matrix</a>
-      <a href="#boats">The Boats</a>
-      <a href="#itineraries">Itineraries</a>
+      <a href="#boats">Your Boat</a>
+      <a href="#itineraries">The Voyage</a>
+      <a href="#dining">Dining</a>
       <a href="#conditions">Conditions</a>
       <a href="#money">Money</a>
-      <a href="#booking">Booking Plan</a>
+      <a href="#booking">Countdown</a>
     </div>
     <button class="themebtn" id="themebtn" aria-label="Toggle light/dark theme">◐</button>
   </div>
@@ -382,22 +428,22 @@ footer a{color:var(--ink-2)}
 <header class="hero">
   <div class="wrap">
     <div class="kick">
-      <span class="eyebrow">Bareboat Charter Dossier</span>
-      <span class="pill teal"><span class="d"></span>Resurrecting the 2020 Plan</span>
+      <span class="eyebrow">Bareboat Charter Guidebook</span>
+      <span class="pill ok"><span class="d"></span>Booked · Sunsail · Port Louis, Grenada</span>
     </div>
     <h1>The Grenadines,<br><em>finally.</em></h1>
-    <p class="sub">A decision-ready plan for the charter you fully scoped in 2020 and never sailed — rebuilt for <strong>April 2027</strong> with post-Beryl ground truth, current pricing, and four routes from Grenada to St&nbsp;Lucia.</p>
+    <p class="sub">The charter you scoped in 2020 is <strong>booked</strong>: eight of you on a Sunsail 545L out of Port Louis, <strong>Thursday 15 → Friday 23 April 2027</strong>. This is your working guidebook — the voyage day by day, every anchorage and dinner table, post-Beryl ground truth, and the countdown to lines-off.</p>
 
     <div class="metastrip">
-      <div class="cell"><div class="k">Cruising Ground</div><div class="v">Grenada → St Lucia</div></div>
-      <div class="cell"><div class="k">Crew</div><div class="v">8 <small>/ 4–5 cab cat · A/C · watermaker</small></div></div>
-      <div class="cell"><div class="k">Target Window</div><div class="v">Apr 2027 <small>shoulder</small></div></div>
-      <div class="cell"><div class="k">Baseline Route</div><div class="v">~146 <small>nm · 9 days</small></div></div>
+      <div class="cell"><div class="k">Boat</div><div class="v">Sunsail 545L <small>4 cab · A/C · watermaker</small></div></div>
+      <div class="cell"><div class="k">Crew</div><div class="v">8</div></div>
+      <div class="cell"><div class="k">Dates</div><div class="v">Apr 15–23 <small>8 nights · full moon Apr 20</small></div></div>
+      <div class="cell"><div class="k">The Voyage</div><div class="v">~151 <small>nm · Grenada ⟳ Mustique</small></div></div>
     </div>
 
     <!-- ISLAND-CHAIN FEATURE MAP -->
     <div class="mapfeature" id="chainmap">
-      <svg viewBox="0 0 1180 660" role="img" aria-label="Schematic chart of the Grenadines island chain from Grenada in the south to St Lucia in the north, showing the 2020 baseline charter route.">
+      <svg viewBox="0 0 1180 660" role="img" aria-label="Schematic chart of the Grenadines island chain showing the booked April 2027 voyage: north from Port Louis to Bequia via the Tobago Cays and Mustique, returning via Sandy Island and Dragon Bay.">
         <defs>
           <pattern id="grat" width="90" height="90" patternUnits="userSpaceOnUse">
             <path d="M90 0V90M0 90H90" fill="none" stroke="var(--sea-line)" stroke-width="1"/>
@@ -419,15 +465,20 @@ footer a{color:var(--ink-2)}
           <text x="330" y="590">198</text><text x="700" y="560">217</text>
         </g>
 
-        <!-- ROUTE (2020 baseline, dashed rhumb line) -->
+        <!-- THE BOOKED VOYAGE — north in coral, home in teal -->
         <g fill="none" stroke="var(--coral)" stroke-width="2.4" stroke-dasharray="3 7" stroke-linecap="round" opacity=".92">
-          <path d="M232 556 L352 452"/>            <!-- Grenada -> Tyrrell Bay -->
-          <path d="M352 452 L487 392"/>            <!-- Tyrrell -> Salt Whistle -->
-          <path d="M487 392 L651 276"/>            <!-- Mayreau -> Bequia -->
-          <path d="M651 276 L636 322"/>            <!-- Bequia -> Mustique -->
-          <path d="M636 322 L520 380"/>            <!-- Mustique -> Tobago Cays -->
-          <path d="M520 380 L410 416"/>            <!-- Cays -> Petite Martinique -->
-          <path d="M410 416 L232 556"/>            <!-- PM -> Grenada -->
+          <path d="M232 556 Q276 500 352 452"/>     <!-- Apr 16: Port Louis -> Tyrrell Bay -->
+          <path d="M352 452 L456 398"/>             <!-- Apr 17: Tyrrell -> Clifton -->
+          <path d="M456 398 L522 376"/>             <!-- Apr 17: Clifton -> Tobago Cays -->
+          <path d="M522 376 L636 322"/>             <!-- Apr 18: Cays -> Mustique -->
+          <path d="M636 322 L651 276"/>             <!-- Apr 19: Mustique -> Bequia -->
+        </g>
+        <g fill="none" stroke="var(--teal-bright)" stroke-width="2.4" stroke-dasharray="3 7" stroke-linecap="round" opacity=".92">
+          <path d="M644 280 Q560 330 528 384"/>     <!-- Apr 20: Bequia -> Cays (full moon) -->
+          <path d="M516 384 L448 406"/>             <!-- Apr 21: Cays -> Clifton -->
+          <path d="M448 406 L346 460"/>             <!-- Apr 21: Clifton -> Tyrrell / Sandy I -->
+          <path d="M346 460 Q246 490 219 528"/>     <!-- Apr 22: Tyrrell -> Dragon Bay -->
+          <path d="M219 528 L230 552"/>             <!-- Apr 23: Dragon Bay -> base -->
         </g>
 
         <!-- ISLANDS (schematic, not to scale) -->
@@ -489,9 +540,11 @@ footer a{color:var(--ink-2)}
           <text x="600" y="240">Bequia</text>
           <!-- St Vincent label (fixed dark: sits on light sand in both themes) -->
           <text x="690" y="216" fill="#12303f">St Vincent</text>
-          <!-- St Lucia base -->
-          <rect x="922" y="112" width="12" height="12" rx="2" transform="rotate(45 928 118)" fill="var(--teal)"/>
-          <text x="838" y="232">Rodney Bay · St Lucia</text>
+          <!-- Dragon Bay (final night) -->
+          <circle cx="219" cy="528" r="5.5" fill="var(--surface)" stroke="var(--teal-bright)" stroke-width="2.5"/>
+          <text x="96" y="524">Dragon Bay</text>
+          <!-- St Lucia — not this trip -->
+          <text x="852" y="150" fill="var(--ink-3)">St Lucia</text>
           </g>
         </g>
 
@@ -507,7 +560,8 @@ footer a{color:var(--ink-2)}
       </svg>
     </div>
     <div class="maplegend">
-      <div class="item"><span class="sw"></span>2020 baseline route</div>
+      <div class="item"><span class="sw"></span>Northbound · Apr 16–19</div>
+      <div class="item"><span class="sw" style="border-top-color:var(--teal-bright)"></span>Homeward · Apr 20–23</div>
       <div class="item"><span class="sw node"></span>Overnight anchorage</div>
       <div class="item"><span class="sw port"></span>Charter base / clearance</div>
       <div class="item"><span class="sw hz"></span>Kick 'em Jenny exclusion zone</div>
@@ -520,42 +574,41 @@ footer a{color:var(--ink-2)}
 <!-- ============ EXECUTIVE SUMMARY ============ -->
 <section id="summary">
   <div class="wrap">
-    <div class="sechead"><span class="num">00</span><span class="eyebrow">Executive Summary</span></div>
-    <h2 style="max-width:16ch;margin-bottom:14px">The recommendation, before the reasoning.</h2>
-    <p class="section-intro">You planned this route once and it holds up. The chain is <strong>open for business</strong> — every 2020 stop is viable for April 2027, though Beryl left fingerprints you'll want to plan around. Below is the single plan we'd book; the rest of this dossier is the evidence and the alternatives.</p>
+    <div class="sechead"><span class="num">00</span><span class="eyebrow">The Plan · Locked</span></div>
+    <h2 style="max-width:16ch;margin-bottom:14px">Seven years later, you're going.</h2>
+    <p class="section-intro">The 2020 charter is finally on the books — dates locked, boat assigned, crew of eight. Every stop on the chain is <strong>open for business</strong> post-Beryl (the fingerprints that remain are flagged in §1). What follows is the working guidebook: the voyage day by day, the tables worth booking, and everything to do before wheels-up.</p>
 
     <div class="reco" style="margin-top:28px">
-      <span class="eyebrow">Our Single Recommended Plan</span>
-      <h2>Sail it one-way, north to south, on a Leopard 50.</h2>
-      <p class="lead">Fly into St&nbsp;Lucia, drop down the whole island chain finishing at your old home base in Grenada — on a boat with genuine room for eight, generator-run air conditioning and a watermaker as standard equipment, from the only company that makes the one-way possible.</p>
+      <span class="eyebrow">Booked &amp; Confirmed</span>
+      <h2>Eight of you, a 54-foot cat, and the full Grenadines loop.</h2>
+      <p class="lead">Check in Thursday afternoon at Port Louis, sail north through the Cays to Mustique and Bequia, and ride the <strong>20 April full moon</strong> back south through a lobster barbecue in the Tobago Cays to a final-night snorkel over the Molinere sculptures.</p>
       <div class="chips">
-        <div class="chip"><div class="k">Company</div><div class="v">The Moorings</div></div>
-        <div class="chip"><div class="k">Boat</div><div class="v">Moorings 5000 · Leopard 50</div></div>
-        <div class="chip"><div class="k">Cabins / Heads</div><div class="v">4–5 / 5 · sleeps 8–10</div></div>
-        <div class="chip"><div class="k">Systems</div><div class="v">A/C + gen + watermaker std</div></div>
-        <div class="chip"><div class="k">Itinerary</div><div class="v">Option D · 10-day one-way</div></div>
-        <div class="chip"><div class="k">Route</div><div class="v">Rodney Bay → Port Louis</div></div>
-        <div class="chip"><div class="k">Window</div><div class="v">10–24 April 2027</div></div>
-        <div class="chip"><div class="k">Flights</div><div class="v">Open-jaw · UVF in / GND out</div></div>
-        <div class="chip"><div class="k">Est. all-in / person</div><div class="v">≈ $4,400 <span style="font-size:.7rem;color:#9fc0bf">comfortable</span></div></div>
+        <div class="chip"><div class="k">Check-in</div><div class="v">Thu 15 Apr · ~15:00</div></div>
+        <div class="chip"><div class="k">Check-out</div><div class="v">Fri 23 Apr · morning</div></div>
+        <div class="chip"><div class="k">Boat</div><div class="v">Sunsail 545L · 4 cab</div></div>
+        <div class="chip"><div class="k">Base</div><div class="v">Port Louis Marina, Grenada</div></div>
+        <div class="chip"><div class="k">Route</div><div class="v">Grenada ⟳ Bequia · ~151 nm</div></div>
+        <div class="chip"><div class="k">Northernmost</div><div class="v">Admiralty Bay, Bequia</div></div>
+        <div class="chip"><div class="k">Full moon</div><div class="v">Tue 20 Apr · in the Cays</div></div>
+        <div class="chip"><div class="k">Crew</div><div class="v">8 · SEA / PHX / DFW</div></div>
       </div>
     </div>
 
     <div class="cols3" style="margin-top:24px">
       <div class="card">
-        <div class="cap">Why one-way</div>
-        <h4>Only Moorings &amp; Sunsail can do it</h4>
-        <p style="font-size:.92rem;color:var(--ink-2);margin:0">They alone run bases in <strong>both</strong> Grenada (Port Louis) and St&nbsp;Lucia (Rodney Bay). The published one-way fee is <strong>$2,100</strong>. Everyone else — including Dream, your 2020 operator — is single-island here.</p>
+        <div class="cap">The shape of the week</div>
+        <h4>Slow up, moon-lit back</h4>
+        <p style="font-size:.92rem;color:var(--ink-2);margin:0">Northbound Apr 16–19 in short lee-side hops (nothing over 33&nbsp;nm), turning at <strong>Bequia</strong>. Homeward Apr 20–23 rides the full moon: Romeo's barbecue in the Cays, Sandy Island, and a sculpture-park finale at Dragon Bay.</p>
       </div>
       <div class="card">
-        <div class="cap">Why the switch from Dream</div>
-        <h4>Dream is Grenada-only now</h4>
-        <p style="font-size:.92rem;color:var(--ink-2);margin:0">Dream Yacht has no St&nbsp;Lucia bareboat base, so it can't do the one-way. It's still the <strong>value round-trip</strong> pick — the Bali&nbsp;4.6 sleeps 10 with A/C — but its watermaker must be <strong>confirmed in writing per hull</strong>, which your non-negotiables make a real risk.</p>
+        <div class="cap">What's still on you</div>
+        <h4>Three bookings make the trip</h4>
+        <p style="font-size:.92rem;color:var(--ink-2);margin:0"><strong>Mustique's mooring</strong> (limited, mandatory — call the Harbour Master), <strong>Romeo's BBQ</strong> for the full-moon night, and <strong>flights with the Tue/Wed arrival buffer</strong>. The countdown in §7 has dates and phone numbers.</p>
       </div>
       <div class="card">
-        <div class="cap">The 2020 scar tissue</div>
-        <h4>Protect the deposit this time</h4>
-        <p style="font-size:.92rem;color:var(--ink-2);margin:0">Moorings terms are <strong>strict</strong> (deposit non-refundable, 100% inside 180 days). The fix isn't a COVID guarantee — it's the <strong>12-month refund credit + a Cancel-For-Any-Reason rider</strong> bought at deposit.</p>
+        <div class="cap">Insurance, still</div>
+        <h4>2020-proof the balance</h4>
+        <p style="font-size:.92rem;color:var(--ink-2);margin:0">The deposit is committed; the balance isn't. If you haven't already, add the <strong>Cancel-For-Any-Reason rider</strong> and confirm the refund-credit terms in writing before final payment comes due (typically ~60–90 days out).</p>
       </div>
     </div>
 
@@ -651,9 +704,9 @@ footer a{color:var(--ink-2)}
 <!-- ============ 2 · FLIGHTS ============ -->
 <section id="flights">
   <div class="wrap">
-    <div class="sechead"><span class="num">02</span><span class="eyebrow">Deliverable 1 · Flights</span></div>
+    <div class="sechead"><span class="num">02</span><span class="eyebrow">Flights · Arrive by Wed 14 Apr</span></div>
     <h2 style="max-width:22ch">Three cities, one island, and the once-daily bottleneck.</h2>
-    <p class="section-intro">SEA, PHX and DFW all funnel through the same eastern/southern hubs — <strong>MIA, CLT</strong> (American), <strong>ATL</strong> (Delta), <strong>JFK/BOS</strong> (JetBlue). There is <strong>no West-Coast nonstop</strong> to any of the three islands, and the island legs are <strong>once-daily</strong>. That single fact drives the whole flight plan.</p>
+    <p class="section-intro"><strong>Hard dates now:</strong> everyone on-island by <strong>Wednesday 14 April</strong> for the Thursday 15:00 check-in — SEA/PHX should target <strong>Tuesday 13</strong>. Book the return for <strong>Saturday 24 April</strong>; Friday checkout is the morning of the 23rd and the once-daily GND departure leaves no margin for customs, the taxi, and a delay. SEA, PHX and DFW all funnel through the same eastern/southern hubs — <strong>MIA, CLT</strong> (American), <strong>ATL</strong> (Delta), <strong>JFK/BOS</strong> (JetBlue). There is <strong>no West-Coast nonstop</strong> to any of the three islands, and the island legs are <strong>once-daily</strong>. That single fact drives the whole flight plan.</p>
 
     <div class="stats" style="margin-top:26px">
       <div class="stat"><div class="n">0</div><div class="l">West-coast nonstops to GND/UVF/SVD</div></div>
@@ -1501,8 +1554,8 @@ footer a{color:var(--ink-2)}
 <!-- ============ 5 · CONDITIONS ============ -->
 <section id="conditions" style="background:var(--paper-2)">
   <div class="wrap">
-    <div class="sechead"><span class="num">05</span><span class="eyebrow">Deliverable 4 · Conditions &amp; Timing</span></div>
-    <h2 style="max-width:22ch">April is the sweet spot — and here's the exact window.</h2>
+    <div class="sechead"><span class="num">05</span><span class="eyebrow">Conditions · 15–23 April 2027</span></div>
+    <h2 style="max-width:22ch">Your week sits in the sweet spot.</h2>
     <p class="section-intro">After the Christmas Winds, before the rains and hurricane season. Steady E/ENE trades, dry, warm water. The two channel crossings are the only legs you plan <em>around</em> the forecast.</p>
 
     <div class="stats" style="margin-top:26px">
@@ -1544,10 +1597,10 @@ footer a{color:var(--ink-2)}
       </div>
 
       <div style="display:flex;flex-direction:column;gap:16px">
-        <div class="card">
-          <div class="cap">The best two weeks</div>
-          <h4 style="margin:4px 0">10–24 April 2027</h4>
-          <p style="font-size:.92rem;color:var(--ink-2);margin:0">Solidly late dry season (ahead of the late-April convective uptick), brackets the <strong>full moon of 20 April</strong> for bright dinghy runs and dawn channel starts, and sits well clear of Easter (Sun 28 Mar). <strong>New moon 6 April</strong> if you'd rather have darker, star-filled nights early.</p>
+        <div class="card" style="border-color:var(--teal)">
+          <div class="cap">Your dates — 15–23 April 2027</div>
+          <h4 style="margin:4px 0">You booked the best week of the month</h4>
+          <p style="font-size:.92rem;color:var(--ink-2);margin:0">Solidly late dry season, clear of Easter (Sun 28 Mar), ahead of the late-April convective uptick — and the <strong>full moon lands Tuesday 20 April, mid-charter</strong>. The waxing moon brightens every night of the homeward run: moonlit dinghy rides in the Cays, a silver Sandy Island, and light for the dawn Carriacou→Grenada start.</p>
         </div>
         <div class="card">
           <div class="cap">Plan these two around the forecast</div>
@@ -1658,50 +1711,57 @@ footer a{color:var(--ink-2)}
 <!-- ============ 7 · BOOKING TIMELINE ============ -->
 <section id="booking" style="background:var(--paper-2)">
   <div class="wrap">
-    <div class="sechead"><span class="num">07</span><span class="eyebrow">Booking Timeline</span></div>
-    <h2 style="max-width:22ch">Counting back from 15 April 2027.</h2>
-    <p class="section-intro">April is the tail of high season and the good 45-ft cats book early. It's already mid-2026 — the boat is the one thing to lock <strong>now</strong>.</p>
+    <div class="sechead"><span class="num">07</span><span class="eyebrow">Countdown to Lines-Off</span></div>
+    <h2 style="max-width:22ch">Counting down to Thursday 15 April 2027.</h2>
+    <p class="section-intro">The boat is locked. What remains is flights, three phone calls, and the pre-departure drill — each with a real date attached.</p>
 
     <div class="timeline" style="margin-top:28px">
       <div class="tl-item key">
-        <div class="when">NOW · ~9 mo</div>
+        <div class="when">NOW · Jul 2026</div>
         <div class="body">
-          <h4>Book the boat &amp; buy the insurance in the same transaction</h4>
-          <p>Reserve the <strong>Moorings 5000 Exclusive one-way</strong> (or Sunsail 454L / Dream Bali 4.6 — watermaker in writing). The advertised <strong>20%-off promo requires confirmation by 10 Jul 2026</strong>; if it's lapsed, ask what replaced it. At deposit, buy the <strong>Cancel-For-Any-Reason rider</strong> and elect the 12-month refund credit / Flex plan — this is the 2020-proofing, and it only exists if bought up front. Register <strong>SailClear</strong> ($25/yr) any time.</p>
+          <h4>Flights &amp; insurance — the schedules are already loaded</h4>
+          <p>April 2027 inventory is bookable now. Fly in <strong>Tue 13 Apr (SEA/PHX)</strong> / <strong>Wed 14 Apr (DFW)</strong>, home <strong>Sat 24 Apr</strong> (the once-daily GND departure makes a Fri-checkout-to-Fri-flight sprint a bad bet). Book the Grand Anse / Port Louis hotel for the buffer nights and Fri 23 Apr. If not already done at deposit, add the <strong>Cancel-For-Any-Reason rider</strong> and get Sunsail's Flex/refund-credit terms in writing. Register <strong>SailClear</strong> ($25/yr).</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="when">~7–8 mo</div>
+        <div class="when">Jan 2027 · ~90 d</div>
         <div class="body">
-          <h4>Book flights the moment April 2027 schedules load</h4>
-          <p>Open-jaw <strong>UVF in / GND out</strong> for the one-way. Lock the arrival buffer (Tue for SEA/PHX, Wed for DFW) and any overnight-at-hub. Position leg via <strong>Barbados (BGI)</strong> if needed. Reserve pre/post hotels — <strong>Rodney Bay</strong> (St Lucia) and <strong>Grand Anse / Port Louis</strong> (Grenada).</p>
+          <h4>Final payment lands — check the date now</h4>
+          <p>Sunsail balances typically fall due <strong>~90 days out (≈ mid-January 2027)</strong> — confirm your exact date and make sure the insurance is active before it. Ask the base to note your <strong>watermaker + A/C briefing</strong> and any pre-order items (SUP, snorkel gear for 8, extra fuel jugs).</p>
         </div>
       </div>
       <div class="tl-item key">
-        <div class="when">~3–4 mo</div>
+        <div class="when">Jan–Feb 2027</div>
         <div class="body">
           <h4>Reserve the Mustique mooring — it's limited</h4>
-          <p>Only ~30 balls, mandatory, April is peak. Contact the Harbour Master (<span class="mono">Slick Berris +1-784-488-8363</span>) to hold one. Line up the <strong>provisioning plan</strong> (charter base package or IGA delivery) and confirm the sleep-aboard night.</p>
+          <p>Only ~30 balls, mandatory, April is peak — and you need <strong>Sunday 18 April</strong>. Contact the Harbour Master (<span class="mono">Slick Berris +1-784-488-8363</span>); the ~US$200 permit covers 3 days, so a second Mustique night costs nothing extra if the weather argues for it. Line up the <strong>provisioning plan</strong> (Sunsail package or IGA delivery to the dock for Thu 15).</p>
         </div>
       </div>
       <div class="tl-item">
-        <div class="when">~1 mo</div>
+        <div class="when">Mid-Mar 2027</div>
         <div class="body">
-          <h4>Book Romeo &amp; pre-pay park fees</h4>
-          <p>Message <strong>Romeo's BBQ</strong> (<span class="mono">WhatsApp +1-784-532-9822</span>) to pencil the Tobago Cays lobster night. Pre-pay Tobago Cays fees online at <strong>tcmp.reefsupport.org</strong>. Re-confirm the unconfirmed venues (Lazy Turtle, Palm Beach, Happy Island, Salt Whistle spit).</p>
+          <h4>Book Romeo for the full-moon night &amp; pre-pay park fees</h4>
+          <p>Message <strong>Romeo's BBQ</strong> (<span class="mono">WhatsApp +1-784-532-9822</span>) for <strong>Tuesday 20 April</strong> — lobster on Petit Bateau under the full moon, party of 8. Pre-pay Tobago Cays fees at <strong>tcmp.reefsupport.org</strong> (two nights, 8 pax). Re-confirm the flagged venues: Lazy Turtle / Slipway (Carriacou), Happy Island (Union), Salt Whistle spit status.</p>
         </div>
       </div>
       <div class="tl-item key">
-        <div class="when">Departure −2 wk → day</div>
+        <div class="when">Apr 1–14 2027</div>
         <div class="body">
-          <h4>Final provisioning, forecast &amp; hazard check</h4>
-          <p>Finalize the grocery order. Pull marine forecasts (PassageWeather / Windy) for the <strong>Bequia Channel</strong> and <strong>Carriacou–Grenada</strong> legs. <strong>Re-check the UWI-SRC / NaDMA Kick 'em Jenny alert level</strong> and CSSN/Noonsite security bulletins. Weigh every duffel to ≤44&nbsp;lb. Arrive on-island 1–2 days early — non-negotiable.</p>
+          <h4>Final provisioning, forecast &amp; hazard check — then fly</h4>
+          <p>Finalize the grocery order for dockside delivery Thu 15. Pull marine forecasts (PassageWeather / Windy) for the two ~30&nbsp;nm crossings (<strong>Fri 16</strong> north, <strong>Thu 22</strong> south). <strong>Re-check the UWI-SRC / NaDMA Kick 'em Jenny alert level</strong> and CSSN/Noonsite bulletins. Weigh every duffel to ≤44&nbsp;lb. SEA/PHX fly <strong>Tue 13</strong>, DFW <strong>Wed 14</strong>; everyone sleeps at Grand Anse Wednesday night.</p>
+        </div>
+      </div>
+      <div class="tl-item key">
+        <div class="when">Thu 15 Apr</div>
+        <div class="body">
+          <h4>Check-in ~15:00 · Port Louis Marina</h4>
+          <p>Boat and chart briefing, provisioning stowed, dinner in St George's or at the marina, Night&nbsp;1 alongside. <strong>Lines off 08:00 Friday.</strong> Seven years late, right on time.</p>
         </div>
       </div>
     </div>
 
     <div class="disclaimer" style="margin-top:30px">
-      <strong>Confirm-before-you-commit shortlist:</strong> live April-2027 charter quote + deposit figures · Mustique mooring availability &amp; current price · Salt Whistle Bay spit condition · fuel at Petite Martinique (assume none) · Lazy Turtle / Slipway / Palm Beach / Happy Island operating status · SVG diesel price (2026 cap may lift) · Kick 'em Jenny alert level at departure · current security &amp; sargassum bulletins.
+      <strong>Confirm-before-departure shortlist:</strong> Sunsail base check-in time &amp; sleep-aboard details for Thu 15 Apr · Mustique mooring availability &amp; current price · Salt Whistle Bay spit condition · fuel at Petite Martinique (assume none) · Lazy Turtle / Slipway / Palm Beach / Happy Island operating status · SVG diesel price (2026 cap may lift) · Kick 'em Jenny alert level at departure · current security &amp; sargassum bulletins.
     </div>
   </div>
 </section>
@@ -1710,8 +1770,8 @@ footer a{color:var(--ink-2)}
 
 <footer>
   <div class="wrap">
-    <p style="font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:4px">Grenadines Charter Dossier · April 2027</p>
-    <p class="foot-note">Prepared as a decision-support document. Prices tagged <span class="verified">VERIFIED</span> reflect published 2025–26 rates; <span class="est">EST</span> figures are planning estimates and must be re-confirmed at booking. The East Caribbean dollar (XCD) is pegged at <strong>EC$2.70 = US$1</strong>. Hurricane season runs Jun 1–Nov 30; April sits safely outside it.</p>
+    <p style="font-family:var(--serif);font-size:1.1rem;color:var(--ink);margin-bottom:4px">Grenadines Charter Guidebook · 15–23 April 2027 · Sunsail 545L "booked" out of Port Louis</p>
+    <p class="foot-note">Prepared as the crew guidebook for a booked charter. Prices tagged <span class="verified">VERIFIED</span> reflect published 2025–26 rates; <span class="est">EST</span> figures are planning estimates and must be re-confirmed at booking. The East Caribbean dollar (XCD) is pegged at <strong>EC$2.70 = US$1</strong>. Hurricane season runs Jun 1–Nov 30; April sits safely outside it.</p>
     <div class="disclaimer">Do your own final verification before committing funds. Charter fleets, mooring fees, customs schedules and flight routings change; Beryl recovery is ongoing. This dossier flags what was current at research time (mid-2026) and what still needs a phone call. Sea conditions and volcanic-hazard status must be checked against live NaDMA / UWI-SRC and marine forecasts before departure.</p>
     <details style="margin-top:22px">
       <summary style="cursor:pointer;font-family:var(--mono);font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)">Key sources &amp; further reading</summary>
